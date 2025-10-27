@@ -1,21 +1,48 @@
 const sharp = require('sharp');
 const path = require('path');
 
-async function optimizeImage(inputName, outputName, maxWidth) {
+async function optimizeImage(inputName, outputName, maxWidth, options = {}) {
     const inputPath = path.join(process.cwd(), 'public', 'images', inputName);
     const outputPath = path.join(process.cwd(), 'public', 'images', 'optimized', outputName);
 
     try {
-        await sharp(inputPath)
-            .resize(maxWidth, null, {
+        let pipeline = sharp(inputPath);
+
+        if (options.width && options.height) {
+            // Exact dimensions with cover fit
+            pipeline = pipeline.resize(options.width, options.height, {
+                fit: 'cover',
+                position: 'center'
+            });
+        } else {
+            // Max width while maintaining aspect ratio
+            pipeline = pipeline.resize(maxWidth, null, {
                 withoutEnlargement: true,
                 fit: 'inside'
-            })
-            .jpeg({
-                quality: 80,
-                progressive: true
-            })
-            .toFile(outputPath);
+            });
+        }
+
+        // Apply any overlay text if provided
+        if (options.overlayText) {
+            // Create text overlay
+            const textBuffer = await sharp({
+                text: {
+                    text: options.overlayText,
+                    font: 'Arial',
+                    fontSize: 48,
+                    rgba: true
+                }
+            }).toBuffer();
+
+            pipeline = pipeline.composite([
+                { input: textBuffer, gravity: 'center' }
+            ]);
+        }
+
+        await pipeline.jpeg({
+            quality: 80,
+            progressive: true
+        }).toFile(outputPath);
 
         console.log(`${outputName} optimized successfully!`);
     } catch (error) {
@@ -29,6 +56,12 @@ async function optimizeAllImages() {
 
     // Portrait version - optimized for mobile
     await optimizeImage('background-portrait.jpg', 'background-portrait.jpg', 1200);
+
+    // OpenGraph image - exact dimensions
+    await optimizeImage('background.jpg', 'og-image.jpg', null, {
+        width: 1200,
+        height: 630,
+    });
 }
 
 optimizeAllImages();

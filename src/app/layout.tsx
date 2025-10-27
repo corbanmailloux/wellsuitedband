@@ -12,6 +12,28 @@ export const metadata: Metadata = {
     shortcut: '/images/logo-white-bg.svg',
     apple: '/images/logo-white-bg.svg',
   },
+  openGraph: {
+    title: 'Well Suited',
+    description: 'Six-piece Rock/Alternative/Americana band known for high-energy shows and infectious good vibes',
+    url: 'https://wellsuitedband.com',
+    siteName: 'Well Suited',
+    images: [
+      {
+        url: '/images/optimized/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Well Suited Band',
+      }
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Well Suited',
+    description: 'Six-piece Rock/Alternative/Americana band known for high-energy shows and infectious good vibes',
+    images: ['/images/optimized/og-image.jpg'],
+  },
 }
 
 export default function RootLayout({
