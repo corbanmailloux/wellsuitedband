@@ -19,14 +19,28 @@ export default function About() {
     <main className="min-h-screen relative">
       {/* Full-screen background image */}
       <div className="fixed inset-0 z-0">
-        <Image
-          src="/images/optimized/background.jpg"
-          alt="Well Suited Band"
-          fill
-          style={{ objectFit: 'cover' }}
-          priority
-          quality={85}
-        />
+        {/* Portrait/Mobile background */}
+        <div className="block md:hidden w-full h-full">
+          <Image
+            src="/images/optimized/background-portrait.jpg"
+            alt="Well Suited Band"
+            fill
+            style={{ objectFit: 'cover' }}
+            priority
+            quality={85}
+          />
+        </div>
+        {/* Landscape/Desktop background */}
+        <div className="hidden md:block w-full h-full">
+          <Image
+            src="/images/optimized/background.jpg"
+            alt="Well Suited Band"
+            fill
+            style={{ objectFit: 'cover' }}
+            priority
+            quality={85}
+          />
+        </div>
         {/* Dark overlay */}
         <div
           className="absolute inset-0 bg-black bg-opacity-70"
@@ -52,8 +66,7 @@ export default function About() {
 
           <div className="prose prose-invert" onClick={(e) => e.stopPropagation()}>
             <p className="mb-4">
-              Well Suited is a dynamic band bringing energy and professionalism to every performance.
-              From weddings to corporate events, we deliver an unforgettable musical experience.
+              Well Suited is a six-piece Rock/Alternative/Americana band known for high-energy shows and infectious good vibes. Since forming in 2010, we've evolved into a genre-blending powerhouse with saxophone, driving guitars, and irresistible grooves.
             </p>
 
             <h2 className="text-2xl font-bold text-brand-yellow mt-8 mb-4">Contact Us</h2>
@@ -68,12 +81,12 @@ export default function About() {
             </p>
 
             <h2 className="text-2xl font-bold text-brand-yellow mt-8 mb-4">Follow Us</h2>
-            <div className="flex gap-6">
+            <div className="flex flex-wrap gap-4 md:gap-6">
               <a
                 href="https://instagram.com/wellsuitedband"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-brand-yellow transition-colors flex items-center gap-2"
+                className="text-white hover:text-brand-yellow transition-colors flex items-center gap-2 basis-[calc(50%-0.5rem)] md:basis-auto"
               >
                 <FaInstagram className="w-6 h-6" />
                 Instagram
@@ -82,7 +95,7 @@ export default function About() {
                 href="https://www.youtube.com/@wellsuitedband"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-brand-yellow transition-colors flex items-center gap-2"
+                className="text-white hover:text-brand-yellow transition-colors flex items-center gap-2 basis-[calc(50%-0.5rem)] md:basis-auto"
               >
                 <FaYoutube className="w-6 h-6" />
                 YouTube
@@ -91,7 +104,7 @@ export default function About() {
                 href="https://open.spotify.com/artist/7rIYaPPZCDQTTFi9zhX6no"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-brand-yellow transition-colors flex items-center gap-2"
+                className="text-white hover:text-brand-yellow transition-colors flex items-center gap-2 basis-[calc(50%-0.5rem)] md:basis-auto"
               >
                 <FaSpotify className="w-6 h-6" />
                 Spotify
@@ -100,7 +113,7 @@ export default function About() {
                 href="https://music.apple.com/us/artist/well-suited/1526096406"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-brand-yellow transition-colors flex items-center gap-2"
+                className="text-white hover:text-brand-yellow transition-colors flex items-center gap-2 basis-[calc(50%-0.5rem)] md:basis-auto"
               >
                 <FaApple className="w-6 h-6" />
                 Apple Music
