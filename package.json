@@ -1,0 +1,42 @@
+{
+  "name": "wellsuitedband",
+  "version": "1.0.0",
+  "description": "[wellsuitedband.com](https://wellsuitedband.com)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next build && next export",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/corbanmailloux/wellsuitedband.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/corbanmailloux/wellsuitedband/issues"
+  },
+  "homepage": "https://github.com/corbanmailloux/wellsuitedband#readme",
+  "dependencies": {
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-icons": "^5.5.0",
+    "sharp": "^0.34.4"
+  },
+  "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.14.3",
+    "@tailwindcss/postcss": "^4.1.16",
+    "@types/node": "^24.9.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5.9.3"
+  }
+}
