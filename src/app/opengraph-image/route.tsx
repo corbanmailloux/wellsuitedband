@@ -1,7 +1,6 @@
 import { ImageResponse } from 'next/og'
 import { NextRequest } from 'next/server'
 
-export const runtime = 'edge'
 export const dynamic = 'force-static'
 export const revalidate = false
 
@@ -10,6 +9,8 @@ export async function GET(request: NextRequest) {
     width: 1200,
     height: 630,
   }
+
+  const logoUrl = new URL('/images/logo-white-bg.svg', 'https://wellsuitedband.com').toString()
 
   try {
     return new ImageResponse(
@@ -27,7 +28,7 @@ export async function GET(request: NextRequest) {
         >
           {/* Logo */}
           <img
-            src="/images/logo-white-bg.svg"
+            src={logoUrl}
             alt="Well Suited Logo"
             width={256}
             height={256}
