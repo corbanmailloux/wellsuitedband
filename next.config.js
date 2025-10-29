@@ -6,9 +6,6 @@ const nextConfig = {
     domains: [],
     qualities: [75, 85],
   },
-  experimental: {
-    appDir: true
-  },
 }
 
 module.exports = nextConfig
