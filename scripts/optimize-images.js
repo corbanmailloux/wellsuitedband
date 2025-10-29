@@ -62,6 +62,9 @@ async function optimizeAllImages() {
         width: 1200,
         height: 630,
     });
+
+    // 404 page image
+    await optimizeImage('tough_guys.jpg', 'tough_guys.jpg', 1200);
 }
 
 optimizeAllImages();
