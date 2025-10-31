@@ -65,9 +65,51 @@ export default function About() {
           <h1 className="text-4xl font-bold text-brand-yellow mb-6">About Well Suited</h1>
 
           <div className="prose prose-invert" onClick={(e) => e.stopPropagation()}>
-            <p className="mb-4">
-              Well Suited is a six-piece Rock/Alternative/Americana band known for high-energy shows and infectious good vibes. Since forming in 2010, we've evolved into a genre-blending powerhouse with saxophone, driving guitars, and irresistible grooves.
+            <p className="mb-6">
+              Well Suited is a six-piece rock/alternative/Americana band known for high-energy shows and infectious good vibes. Since forming in 2010, we've evolved into a genre-blending powerhouse with saxophone, driving guitars, and irresistible grooves.
             </p>
+
+            {/* Group Photo */}
+            <div className="w-full mb-8 rounded-lg overflow-hidden">
+              <Image
+                src="/images/optimized/group_for_about.jpg"
+                alt="Well Suited Band Group Photo"
+                width={1200}
+                height={675}
+                className="w-full rounded-lg"
+                sizes="(max-width: 768px) 100vw, 800px"
+                priority
+              />
+            </div>
+
+            {/* Band Members */}
+            <h2 className="text-2xl font-bold text-brand-yellow mb-4">The Band</h2>
+            <div className="grid grid-rows-3 md:grid-rows-2 grid-flow-col gap-3 mb-8">
+              <div className="text-center">
+                <h3 className="font-bold">Mike Parker</h3>
+                <p className="text-sm text-gray-300">Guitar</p>
+              </div>
+              <div className="text-center">
+                <h3 className="font-bold">Corban Mailloux</h3>
+                <p className="text-sm text-gray-300">Saxophone</p>
+              </div>
+              <div className="text-center">
+                <h3 className="font-bold">MacKae Freeland</h3>
+                <p className="text-sm text-gray-300">Guitar, Keyboard</p>
+              </div>
+              <div className="text-center">
+                <h3 className="font-bold">Jake Lewis</h3>
+                <p className="text-sm text-gray-300">Bass, Vocals</p>
+              </div>
+              <div className="text-center">
+                <h3 className="font-bold">Dylan Bocon</h3>
+                <p className="text-sm text-gray-300">Lead Vocals, Guitar</p>
+              </div>
+              <div className="text-center">
+                <h3 className="font-bold">Ben Mailloux</h3>
+                <p className="text-sm text-gray-300">Drums, Vocals</p>
+              </div>
+            </div>
 
             <h2 className="text-2xl font-bold text-brand-yellow mt-8 mb-4">Contact Us</h2>
             <p className="mb-4">

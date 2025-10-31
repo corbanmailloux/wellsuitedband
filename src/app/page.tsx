@@ -37,7 +37,7 @@ export default function Home() {
       {/* Content */}
       <div className="relative min-h-screen flex flex-col items-center justify-center p-4 text-white text-center">
         {/* Logo */}
-        <div className="w-60 h-60 mb-6 relative">
+        <div className="w-60 h-60 mb-2 relative">
           <Image
             src="/images/logo-white-bg.svg"
             alt="Well Suited Logo"
@@ -87,7 +87,7 @@ export default function Home() {
         </div>
 
         {/* Next Show Callout */}
-        <div className="bg-black bg-opacity-75 p-8 rounded-lg max-w-md mx-auto mb-6">
+        <div className="bg-black bg-opacity-75 p-6 rounded-lg max-w-md mx-auto mb-4">
           <h2 className="text-3xl font-bold text-brand-yellow mb-4">Upcoming Shows</h2>
           {/* <p className="text-xl">Coming soon...</p> */}
           <a href='https://theparlorroom.my.salesforce-sites.com/ticket/#/events/a0SV5000009skYXMAY/2025-11-11T19:00:00-05:00' target="_blank">

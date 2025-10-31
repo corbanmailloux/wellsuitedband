@@ -65,6 +65,9 @@ async function optimizeAllImages() {
 
     // 404 page image
     await optimizeImage('tough_guys.jpg', 'tough_guys.jpg', 1200);
+
+    // About page group photo
+    await optimizeImage('group_for_about.jpg', 'group_for_about.jpg', 1200);
 }
 
 optimizeAllImages();
