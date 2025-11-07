@@ -91,7 +91,7 @@ export default function About() {
               </div>
               <div className="text-center">
                 <h3 className="font-bold">Corban Mailloux</h3>
-                <p className="text-sm text-gray-300">Saxophone</p>
+                <p className="text-sm text-gray-300">Saxophones</p>
               </div>
               <div className="text-center">
                 <h3 className="font-bold">MacKae Freeland</h3>
