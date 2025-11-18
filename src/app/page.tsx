@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaInstagram, FaYoutube, FaSpotify, FaApple } from 'react-icons/fa'
+import { FaInstagram, FaYoutube, FaSpotify, FaApple, FaTiktok } from 'react-icons/fa'
 
 export default function Home() {
   return (
@@ -61,6 +61,14 @@ export default function Home() {
             <FaInstagram className="w-12 h-12" />
           </a>
           <a
+            href="https://www.tiktok.com/@wellsuitedband"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-brand-yellow transition-colors"
+          >
+            <FaTiktok className="w-12 h-12" />
+          </a>
+          <a
             href="https://www.youtube.com/@wellsuitedband"
             target="_blank"
             rel="noopener noreferrer"
@@ -89,12 +97,18 @@ export default function Home() {
         {/* Next Show Callout */}
         <div className="bg-black bg-opacity-75 p-6 rounded-lg max-w-md mx-auto mb-4">
           <h2 className="text-2xl font-bold text-brand-yellow mb-4">Upcoming Shows</h2>
-          <p className="text-xl">Coming soon...</p>
+          <p className="text-xl">
+            Coming soon...
+          </p>
           <div className="hidden">
             <a href='https://theparlorroom.my.salesforce-sites.com/ticket/#/events/a0SV5000009skYXMAY/2025-11-11T19:00:00-05:00' target="_blank">
               <p className="text-2xl">11/11/2025 @ The Iron Horse</p>
               Pre-order tickets <span className="text-brand-yellow">here!</span>
             </a>
+          </div>
+          <div className="hidden">
+            <p className="text-2xl">11/26/2025 @ Stans in Turners Falls, MA</p>
+            <a className="text-brand-yellow" href='https://www.facebook.com/p/St-Stanislaus-Society-100063656318869/' target='_blank'>St. Stanislaus on Facebook</a>
           </div>
         </div>
 

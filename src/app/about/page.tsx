@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { FaInstagram, FaYoutube, FaSpotify, FaApple } from 'react-icons/fa'
+import { FaInstagram, FaYoutube, FaSpotify, FaApple, FaTiktok } from 'react-icons/fa'
 
 export default function About() {
   const router = useRouter()
@@ -132,6 +132,15 @@ export default function About() {
               >
                 <FaInstagram className="w-6 h-6" />
                 Instagram
+              </a>
+              <a
+                href="https://www.tiktok.com/@wellsuitedband"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-brand-yellow transition-colors flex items-center gap-2 basis-[calc(50%-0.5rem)] md:basis-auto"
+              >
+                <FaTiktok className="w-6 h-6" />
+                TikTok
               </a>
               <a
                 href="https://www.youtube.com/@wellsuitedband"
