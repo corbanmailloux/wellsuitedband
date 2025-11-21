@@ -51,14 +51,14 @@ export default function Home() {
         <h1 className="text-4xl font-bold mb-6 text-white">Well Suited</h1>
 
         {/* Social Links */}
-        <div className="flex space-x-12 mb-8">
+        <div className="flex space-x-6 md:space-x-12 mb-8 items-center justify-center">
           <a
             href="https://instagram.com/wellsuitedband"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-brand-yellow transition-colors"
           >
-            <FaInstagram className="w-12 h-12" />
+            <FaInstagram className="w-8 h-8 md:w-12 md:h-12" />
           </a>
           <a
             href="https://www.tiktok.com/@wellsuitedband"
@@ -66,7 +66,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="text-white hover:text-brand-yellow transition-colors"
           >
-            <FaTiktok className="w-12 h-12" />
+            <FaTiktok className="w-8 h-8 md:w-12 md:h-12" />
           </a>
           <a
             href="https://www.youtube.com/@wellsuitedband"
@@ -74,7 +74,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="text-white hover:text-brand-yellow transition-colors"
           >
-            <FaYoutube className="w-12 h-12" />
+            <FaYoutube className="w-8 h-8 md:w-12 md:h-12" />
           </a>
           <a
             href="https://open.spotify.com/artist/7rIYaPPZCDQTTFi9zhX6no"
@@ -82,7 +82,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="text-white hover:text-brand-yellow transition-colors"
           >
-            <FaSpotify className="w-12 h-12" />
+            <FaSpotify className="w-8 h-8 md:w-12 md:h-12" />
           </a>
           <a
             href="https://music.apple.com/us/artist/well-suited/1526096406"
@@ -90,7 +90,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="text-white hover:text-brand-yellow transition-colors"
           >
-            <FaApple className="w-12 h-12" />
+            <FaApple className="w-8 h-8 md:w-12 md:h-12" />
           </a>
         </div>
 
