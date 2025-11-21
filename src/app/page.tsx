@@ -11,9 +11,9 @@ export default function Home() {
       {/* Full-screen background image */}
       <div className="fixed inset-0 opacity-60">
         {/* Portrait/Mobile background */}
-        <div className="block md:hidden w-full h-full">
+        <div className="relative block md:hidden w-full h-full">
           <Image
-            src="/images/optimized/background-portrait.jpg"
+            src="/images/optimized/background-portrait.avif"
             alt="Well Suited Band"
             fill
             style={{ objectFit: 'cover' }}
@@ -22,9 +22,9 @@ export default function Home() {
           />
         </div>
         {/* Landscape/Desktop background */}
-        <div className="hidden md:block w-full h-full">
+        <div className="relative hidden md:block w-full h-full">
           <Image
-            src="/images/optimized/background.jpg"
+            src="/images/optimized/background.avif"
             alt="Well Suited Band"
             fill
             style={{ objectFit: 'cover' }}
@@ -58,6 +58,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
+            title="Instagram"
             className="text-white hover:text-brand-yellow transition-colors"
           >
             <FaInstagram className="w-8 h-8 md:w-12 md:h-12" />
@@ -67,6 +68,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="TikTok"
+            title="TikTok"
             className="text-white hover:text-brand-yellow transition-colors"
           >
             <FaTiktok className="w-8 h-8 md:w-12 md:h-12" />
@@ -76,6 +78,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="YouTube"
+            title="YouTube"
             className="text-white hover:text-brand-yellow transition-colors"
           >
             <FaYoutube className="w-8 h-8 md:w-12 md:h-12" />
@@ -85,6 +88,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Spotify"
+            title="Spotify"
             className="text-white hover:text-brand-yellow transition-colors"
           >
             <FaSpotify className="w-8 h-8 md:w-12 md:h-12" />
@@ -94,6 +98,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Apple Music"
+            title="Apple Music"
             className="text-white hover:text-brand-yellow transition-colors"
           >
             <FaApple className="w-8 h-8 md:w-12 md:h-12" />

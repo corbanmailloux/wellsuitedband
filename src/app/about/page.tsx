@@ -20,9 +20,9 @@ export default function About() {
       {/* Full-screen background image */}
       <div className="fixed inset-0 z-0">
         {/* Portrait/Mobile background */}
-        <div className="block md:hidden w-full h-full">
+        <div className="relative block md:hidden w-full h-full">
           <Image
-            src="/images/optimized/background-portrait.jpg"
+            src="/images/optimized/background-portrait.avif"
             alt="Well Suited Band"
             fill
             style={{ objectFit: 'cover' }}
@@ -31,9 +31,9 @@ export default function About() {
           />
         </div>
         {/* Landscape/Desktop background */}
-        <div className="hidden md:block w-full h-full">
+        <div className="relative hidden md:block w-full h-full">
           <Image
-            src="/images/optimized/background.jpg"
+            src="/images/optimized/background.avif"
             alt="Well Suited Band"
             fill
             style={{ objectFit: 'cover' }}
@@ -72,7 +72,7 @@ export default function About() {
             {/* Group Photo */}
             <div className="w-full mb-8 rounded-lg overflow-hidden">
               <Image
-                src="/images/optimized/group_for_about.jpg"
+                src="/images/optimized/group_for_about.avif"
                 alt="Well Suited Band Group Photo"
                 width={1200}
                 height={675}

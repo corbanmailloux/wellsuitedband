@@ -10,7 +10,7 @@ export default function NotFound() {
       {/* Full-screen background image */}
       <div className="fixed inset-0 opacity-50">
         <Image
-          src="/images/optimized/tough_guys.jpg"
+          src="/images/optimized/tough_guys.avif"
           alt="Well Suited Band - Tough Guys"
           fill
           style={{ objectFit: 'cover' }}

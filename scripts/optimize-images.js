@@ -4,6 +4,8 @@ const path = require('path');
 async function optimizeImage(inputName, outputName, maxWidth, options = {}) {
     const inputPath = path.join(process.cwd(), 'public', 'images', inputName);
     const outputPath = path.join(process.cwd(), 'public', 'images', 'optimized', outputName);
+    const baseName = outputName.replace(/\.[^.]+$/, '');
+    const outputPathAvif = path.join(process.cwd(), 'public', 'images', 'optimized', `${baseName}.avif`);
 
     try {
         let pipeline = sharp(inputPath);
@@ -39,12 +41,17 @@ async function optimizeImage(inputName, outputName, maxWidth, options = {}) {
             ]);
         }
 
-        await pipeline.jpeg({
+        // Write AVIF first (smaller, modern format), then keep JPEG fallback
+        await pipeline.clone().avif({
+            quality: 60
+        }).toFile(outputPathAvif);
+
+        await pipeline.clone().jpeg({
             quality: 80,
             progressive: true
         }).toFile(outputPath);
 
-        console.log(`${outputName} optimized successfully!`);
+        console.log(`${baseName}.avif and ${outputName} optimized successfully!`);
     } catch (error) {
         console.error(`Error optimizing ${inputName}:`, error);
     }
@@ -64,7 +71,7 @@ async function optimizeAllImages() {
     });
 
     // 404 page image
-    await optimizeImage('tough_guys.jpg', 'tough_guys.jpg', 1200);
+    await optimizeImage('tough_guys.jpg', 'tough_guys.jpg', 2048);
 
     // About page group photo
     await optimizeImage('group_for_about.jpg', 'group_for_about.jpg', 1200);
