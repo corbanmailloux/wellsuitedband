@@ -43,6 +43,7 @@ export default function Home() {
             alt="Well Suited Logo"
             fill
             style={{ objectFit: 'contain' }}
+            fetchPriority="high"
             priority
           />
         </div>
@@ -56,6 +57,7 @@ export default function Home() {
             href="https://instagram.com/wellsuitedband"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Instagram"
             className="text-white hover:text-brand-yellow transition-colors"
           >
             <FaInstagram className="w-8 h-8 md:w-12 md:h-12" />
@@ -64,6 +66,7 @@ export default function Home() {
             href="https://www.tiktok.com/@wellsuitedband"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="TikTok"
             className="text-white hover:text-brand-yellow transition-colors"
           >
             <FaTiktok className="w-8 h-8 md:w-12 md:h-12" />
@@ -72,6 +75,7 @@ export default function Home() {
             href="https://www.youtube.com/@wellsuitedband"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="YouTube"
             className="text-white hover:text-brand-yellow transition-colors"
           >
             <FaYoutube className="w-8 h-8 md:w-12 md:h-12" />
@@ -80,6 +84,7 @@ export default function Home() {
             href="https://open.spotify.com/artist/7rIYaPPZCDQTTFi9zhX6no"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Spotify"
             className="text-white hover:text-brand-yellow transition-colors"
           >
             <FaSpotify className="w-8 h-8 md:w-12 md:h-12" />
@@ -88,6 +93,7 @@ export default function Home() {
             href="https://music.apple.com/us/artist/well-suited/1526096406"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Apple Music"
             className="text-white hover:text-brand-yellow transition-colors"
           >
             <FaApple className="w-8 h-8 md:w-12 md:h-12" />

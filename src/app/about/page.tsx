@@ -78,6 +78,7 @@ export default function About() {
                 height={675}
                 className="w-full rounded-lg"
                 sizes="(max-width: 768px) 100vw, 800px"
+                fetchPriority="high"
                 priority
               />
             </div>
