@@ -23,7 +23,7 @@ export default function NotFound() {
       <div className="relative min-h-screen flex flex-col items-center justify-center p-4 text-white text-center">
         <div className="bg-black bg-opacity-75 p-8 rounded-lg max-w-md mx-auto backdrop-blur-sm">
           <h1 className="text-6xl font-bold mb-4">404</h1>
-          <p className="text-xl mb-8">You're not supposed to be here.</p>
+          <p className="text-xl mb-8">Page not found. You're not supposed to be here.</p>
           <Link
             href="/"
             className="inline-block px-8 py-4 border-2 border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-black transition-colors rounded-lg text-lg"
