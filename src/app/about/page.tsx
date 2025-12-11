@@ -66,7 +66,7 @@ export default function About() {
 
           <div className="prose prose-invert" onClick={(e) => e.stopPropagation()}>
             <p className="mb-6">
-              Well Suited is a six-piece rock/alternative/Americana band known for high-energy shows and infectious good vibes. Since forming in 2010, we've evolved into a genre-blending powerhouse with saxophone, driving guitars, and irresistible grooves.
+              Well Suited is a 6-piece Americana band blending rock and soul into high-energy performances and feel-good grooves. Formed in 2010, the band has grown into a genre-bending force—complete with sax, guitars, piano, and vocal hooks you’ll be humming for days.
             </p>
 
             {/* Group Photo */}

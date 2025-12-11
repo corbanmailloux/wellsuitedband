@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Well Suited',
-    description: 'Six-piece rock/alternative/Americana band known for high-energy shows and infectious good vibes',
+    description: 'Six-piece Americana rock band known for high-energy shows and infectious good vibes',
     url: 'https://wellsuitedband.com',
     siteName: 'Well Suited',
     images: [
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Well Suited',
-    description: 'Six-piece rock/alternative/Americana band known for high-energy shows and infectious good vibes',
+    description: 'Six-piece Americana rock band known for high-energy shows and infectious good vibes',
     images: ['/images/optimized/og-image.jpg'],
   },
 }

@@ -53,7 +53,7 @@ export async function GET(request: NextRequest) {
               marginTop: 10,
             }}
           >
-            Rock/Alternative/Americana Band
+            6-Piece Americana Rock Band
           </div>
         </div>
       ),
