@@ -108,13 +108,14 @@ export default function Home() {
         {/* Next Show Callout */}
         <div className="bg-black bg-opacity-75 p-6 rounded-lg max-w-md mx-auto mb-4">
           <h2 className="text-2xl font-bold text-brand-yellow mb-4">Upcoming Shows</h2>
-          <p className="text-xl">
+          <p className="text-xl hidden">
             Coming soon. <a className="text-brand-yellow" href="https://instagram.com/wellsuitedband" target='_blank'>Book us?</a>
           </p>
-          <div className="hidden">
-            <a href='https://theparlorroom.my.salesforce-sites.com/ticket/#/events/a0SV5000009skYXMAY/2025-11-11T19:00:00-05:00' target="_blank">
-              <p className="text-2xl">11/11/2025 @ The Iron Horse</p>
-              Pre-order tickets <span className="text-brand-yellow">here!</span>
+          <div className="">
+            <a href='https://stonechurchvt.com/events#/events/161604' target="_blank">
+              <p className="text-2xl">1/23/2026 @ Stone Church</p>
+              with Madaila in Brattleboro, VT<br />
+              Details and tickets <span className="text-brand-yellow">here!</span>
             </a>
           </div>
           <div className="hidden">
