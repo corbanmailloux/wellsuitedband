@@ -108,10 +108,10 @@ export default function Home() {
         {/* Next Show Callout */}
         <div className="bg-black bg-opacity-75 p-6 rounded-lg max-w-md mx-auto mb-4">
           <h2 className="text-2xl font-bold text-brand-yellow mb-4">Upcoming Shows</h2>
-          <p className="text-xl hidden">
+          <p className="text-xl">
             Coming soon. <a className="text-brand-yellow" href="https://instagram.com/wellsuitedband" target='_blank'>Book us?</a>
           </p>
-          <div className="">
+          <div className="hidden">
             <a href='https://stonechurchvt.com/events#/events/161604' target="_blank">
               <p className="text-2xl">1/23/2026 @ Stone Church</p>
               with Madaila in Brattleboro, VT<br />
