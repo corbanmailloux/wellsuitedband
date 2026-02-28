@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { FaInstagram, FaYoutube, FaSpotify, FaApple, FaTiktok } from 'react-icons/fa'
+import { FaInstagram, FaFacebook, FaYoutube, FaSpotify, FaApple, FaTiktok } from 'react-icons/fa'
 
 export default function About() {
   const router = useRouter()
@@ -124,21 +124,30 @@ export default function About() {
             </p>
 
             <h2 className="text-2xl font-bold text-brand-yellow mt-8 mb-4">Follow Us</h2>
-            <div className="flex flex-wrap gap-4 md:gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 md:grid-rows-2 gap-4 mb-8">
               <a
                 href="https://instagram.com/wellsuitedband"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-brand-yellow transition-colors flex items-center gap-2 basis-[calc(50%-0.5rem)] md:basis-auto"
+                className="text-white hover:text-brand-yellow transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
                 <FaInstagram className="w-6 h-6" />
                 Instagram
               </a>
               <a
+                href="https://www.facebook.com/wellsuitedband"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-brand-yellow transition-colors flex items-center justify-center gap-2 w-full h-full"
+              >
+                <FaFacebook className="w-6 h-6" />
+                Facebook
+              </a>
+              <a
                 href="https://www.tiktok.com/@wellsuitedband"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-brand-yellow transition-colors flex items-center gap-2 basis-[calc(50%-0.5rem)] md:basis-auto"
+                className="text-white hover:text-brand-yellow transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
                 <FaTiktok className="w-6 h-6" />
                 TikTok
@@ -147,7 +156,7 @@ export default function About() {
                 href="https://www.youtube.com/@wellsuitedband"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-brand-yellow transition-colors flex items-center gap-2 basis-[calc(50%-0.5rem)] md:basis-auto"
+                className="text-white hover:text-brand-yellow transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
                 <FaYoutube className="w-6 h-6" />
                 YouTube
@@ -156,7 +165,7 @@ export default function About() {
                 href="https://open.spotify.com/artist/7rIYaPPZCDQTTFi9zhX6no"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-brand-yellow transition-colors flex items-center gap-2 basis-[calc(50%-0.5rem)] md:basis-auto"
+                className="text-white hover:text-brand-yellow transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
                 <FaSpotify className="w-6 h-6" />
                 Spotify
@@ -165,7 +174,7 @@ export default function About() {
                 href="https://music.apple.com/us/artist/well-suited/1526096406"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-brand-yellow transition-colors flex items-center gap-2 basis-[calc(50%-0.5rem)] md:basis-auto"
+                className="text-white hover:text-brand-yellow transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
                 <FaApple className="w-6 h-6" />
                 Apple Music

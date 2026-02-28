@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaInstagram, FaYoutube, FaSpotify, FaApple, FaTiktok } from 'react-icons/fa'
+import { FaInstagram, FaFacebook, FaYoutube, FaSpotify, FaApple, FaTiktok } from 'react-icons/fa'
 
 export default function Home() {
   return (
@@ -62,6 +62,16 @@ export default function Home() {
             className="text-white hover:text-brand-yellow transition-colors"
           >
             <FaInstagram className="w-8 h-8 md:w-12 md:h-12" />
+          </a>
+          <a
+            href="https://www.facebook.com/wellsuitedband"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            title="Facebook"
+            className="text-white hover:text-brand-yellow transition-colors"
+          >
+            <FaFacebook className="w-8 h-8 md:w-12 md:h-12" />
           </a>
           <a
             href="https://www.tiktok.com/@wellsuitedband"
