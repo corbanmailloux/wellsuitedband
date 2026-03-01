@@ -130,7 +130,7 @@ export default function Home() {
           </div>
           <div className="">
             <p className="text-2xl">4/4/2026 @ 9pm</p>
-            <p className="text-lg"><a href='https://www.bar580.com/' target="_blank" className="text-brand-yellow">Bar 580 in Brattleboro, VT</a></p>
+            <p className="text-lg"><a href='https://www.facebook.com/events/1901518910469540/' target="_blank" className="text-brand-yellow">Bar 580 in Brattleboro, VT</a></p>
           </div>
         </div>
 
