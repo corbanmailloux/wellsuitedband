@@ -118,7 +118,7 @@ export default function Home() {
         {/* Next Show Callout */}
         <div className="bg-black bg-opacity-75 p-6 rounded-lg max-w-md mx-auto mb-4">
           <h2 className="text-2xl font-bold text-brand-yellow mb-4">Upcoming Shows</h2>
-          <p className="text-xl hidden">
+          <p className="text-xl">
             Coming soon. <a className="text-brand-yellow" href="https://instagram.com/wellsuitedband" target='_blank'>Book us?</a>
           </p>
           <div className="hidden">
@@ -128,7 +128,7 @@ export default function Home() {
               Details and tickets <span className="text-brand-yellow">here!</span>
             </a>
           </div>
-          <div className="">
+          <div className="hidden">
             <p className="text-2xl">4/4/2026 @ 9pm</p>
             <p className="text-lg"><a href='https://www.facebook.com/events/1901518910469540/' target="_blank" className="text-brand-yellow">Bar 580 in Brattleboro, VT</a></p>
           </div>
