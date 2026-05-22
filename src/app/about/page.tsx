@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { FaInstagram, FaFacebook, FaYoutube, FaSpotify, FaApple, FaTiktok } from 'react-icons/fa'
+import { SiInstagram, SiFacebook, SiYoutube, SiSpotify, SiTiktok, SiApplemusic } from 'react-icons/si'
 
 export default function About() {
   const router = useRouter()
@@ -131,7 +131,7 @@ export default function About() {
                 rel="noopener noreferrer"
                 className="text-white hover:text-brand-yellow transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
-                <FaInstagram className="w-6 h-6" />
+                <SiInstagram className="w-6 h-6" />
                 Instagram
               </a>
               <a
@@ -140,7 +140,7 @@ export default function About() {
                 rel="noopener noreferrer"
                 className="text-white hover:text-brand-yellow transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
-                <FaFacebook className="w-6 h-6" />
+                <SiFacebook className="w-6 h-6" />
                 Facebook
               </a>
               <a
@@ -149,7 +149,7 @@ export default function About() {
                 rel="noopener noreferrer"
                 className="text-white hover:text-brand-yellow transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
-                <FaTiktok className="w-6 h-6" />
+                <SiTiktok className="w-6 h-6" />
                 TikTok
               </a>
               <a
@@ -158,7 +158,7 @@ export default function About() {
                 rel="noopener noreferrer"
                 className="text-white hover:text-brand-yellow transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
-                <FaYoutube className="w-6 h-6" />
+                <SiYoutube className="w-6 h-6" />
                 YouTube
               </a>
               <a
@@ -167,7 +167,7 @@ export default function About() {
                 rel="noopener noreferrer"
                 className="text-white hover:text-brand-yellow transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
-                <FaSpotify className="w-6 h-6" />
+                <SiSpotify className="w-6 h-6" />
                 Spotify
               </a>
               <a
@@ -176,7 +176,7 @@ export default function About() {
                 rel="noopener noreferrer"
                 className="text-white hover:text-brand-yellow transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
-                <FaApple className="w-6 h-6" />
+                <SiApplemusic className="w-6 h-6" />
                 Apple Music
               </a>
             </div>

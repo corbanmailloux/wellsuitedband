@@ -1,4 +1,4 @@
-.PHONY: install dev update
+.PHONY: install dev update optimize_images
 
 install:
 	npm install
@@ -8,3 +8,6 @@ dev:
 
 update:
 	npm update
+
+optimize_images:
+	node scripts/optimize-images.js

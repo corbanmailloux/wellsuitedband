@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaInstagram, FaFacebook, FaYoutube, FaSpotify, FaApple, FaTiktok } from 'react-icons/fa'
+import { SiInstagram, SiFacebook, SiYoutube, SiSpotify, SiTiktok, SiApplemusic } from 'react-icons/si'
 
 export default function Home() {
   return (
@@ -61,7 +61,7 @@ export default function Home() {
             title="Instagram"
             className="text-white hover:text-brand-yellow transition-colors"
           >
-            <FaInstagram className="w-8 h-8 md:w-12 md:h-12" />
+            <SiInstagram className="w-8 h-8 md:w-12 md:h-12" />
           </a>
           <a
             href="https://www.facebook.com/wellsuitedband"
@@ -71,7 +71,7 @@ export default function Home() {
             title="Facebook"
             className="text-white hover:text-brand-yellow transition-colors"
           >
-            <FaFacebook className="w-8 h-8 md:w-12 md:h-12" />
+            <SiFacebook className="w-8 h-8 md:w-12 md:h-12" />
           </a>
           <a
             href="https://www.tiktok.com/@wellsuitedband"
@@ -81,7 +81,7 @@ export default function Home() {
             title="TikTok"
             className="text-white hover:text-brand-yellow transition-colors"
           >
-            <FaTiktok className="w-8 h-8 md:w-12 md:h-12" />
+            <SiTiktok className="w-8 h-8 md:w-12 md:h-12" />
           </a>
           <a
             href="https://www.youtube.com/@wellsuitedband"
@@ -91,7 +91,7 @@ export default function Home() {
             title="YouTube"
             className="text-white hover:text-brand-yellow transition-colors"
           >
-            <FaYoutube className="w-8 h-8 md:w-12 md:h-12" />
+            <SiYoutube className="w-8 h-8 md:w-12 md:h-12" />
           </a>
           <a
             href="https://open.spotify.com/artist/7rIYaPPZCDQTTFi9zhX6no"
@@ -101,7 +101,7 @@ export default function Home() {
             title="Spotify"
             className="text-white hover:text-brand-yellow transition-colors"
           >
-            <FaSpotify className="w-8 h-8 md:w-12 md:h-12" />
+            <SiSpotify className="w-8 h-8 md:w-12 md:h-12" />
           </a>
           <a
             href="https://music.apple.com/us/artist/well-suited/1526096406"
@@ -111,8 +111,53 @@ export default function Home() {
             title="Apple Music"
             className="text-white hover:text-brand-yellow transition-colors"
           >
-            <FaApple className="w-8 h-8 md:w-12 md:h-12" />
+            <SiApplemusic className="w-8 h-8 md:w-12 md:h-12" />
           </a>
+        </div>
+
+        {/* Band News Callout */}
+        <div className="bg-black bg-opacity-75 p-6 rounded-lg max-w-md mx-auto mb-4">
+          <h2 className="text-2xl font-bold text-brand-yellow mb-4">"Wait Forever" Streaming Now</h2>
+          <div className="flex justify-center mb-4">
+            <div className="w-60 md:w-80">
+              <a
+              href="https://open.spotify.com/track/4HnHQGLcZpzUkUWnyZqCII"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/images/optimized/cover-wait-forever.avif"
+                alt="Wait Forever cover art"
+                width={600}
+                height={600}
+                className="w-full h-auto rounded-lg shadow-md"
+                priority
+              />
+              </a>
+            </div>
+          </div>
+          <div className="flex space-x-6 md:space-x-12 items-center justify-center">
+            <a
+              href="https://open.spotify.com/track/4HnHQGLcZpzUkUWnyZqCII"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Wait Forever on Spotify"
+              title="Wait Forever on Spotify"
+              className="text-white hover:text-brand-yellow transition-colors"
+            >
+              <SiSpotify className="w-8 h-8 md:w-12 md:h-12" />
+            </a>
+            <a
+              href="https://music.apple.com/us/album/wait-forever/6770508565"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Wait Forever on Apple Music"
+              title="Wait Forever on Apple Music"
+              className="text-white hover:text-brand-yellow transition-colors"
+            >
+              <SiApplemusic className="w-8 h-8 md:w-12 md:h-12" />
+            </a>
+          </div>
         </div>
 
         {/* Next Show Callout */}

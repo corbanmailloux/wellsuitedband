@@ -75,6 +75,9 @@ async function optimizeAllImages() {
 
     // About page group photo
     await optimizeImage('group_for_about.jpg', 'group_for_about.jpg', 1200);
+
+    // Cover Art. Source is 600x600.
+    await optimizeImage('cover-wait-forever.jpg', 'cover-wait-forever.jpg', 600);
 }
 
 optimizeAllImages();
