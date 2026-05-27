@@ -143,7 +143,7 @@ export default function Home() {
               rel="noopener noreferrer"
               aria-label="Wait Forever on Spotify"
               title="Wait Forever on Spotify"
-              className="text-white hover:text-brand-yellow transition-colors"
+              className="text-white hover:text-[#1ED760] transition-colors"
             >
               <SiSpotify className="w-8 h-8 md:w-12 md:h-12" />
             </a>
@@ -153,7 +153,7 @@ export default function Home() {
               rel="noopener noreferrer"
               aria-label="Wait Forever on Apple Music"
               title="Wait Forever on Apple Music"
-              className="text-white hover:text-brand-yellow transition-colors"
+              className="text-white hover:text-[#FF4E6B] transition-colors"
             >
               <SiApplemusic className="w-8 h-8 md:w-12 md:h-12" />
             </a>
@@ -162,10 +162,16 @@ export default function Home() {
 
         {/* Next Show Callout */}
         <div className="bg-black bg-opacity-75 p-6 rounded-lg max-w-md mx-auto mb-4">
-          <h2 className="text-2xl font-bold text-brand-yellow mb-4">Upcoming Shows</h2>
-          <p className="text-xl">
-            Coming soon. <a className="text-brand-yellow" href="https://instagram.com/wellsuitedband" target='_blank'>Book us?</a>
-          </p>
+          <h2 className="text-3xl font-bold text-brand-yellow mb-4">Upcoming Shows</h2>
+
+          {/* Default when no shows are scheduled */}
+          <div className="hidden">
+            <p className="text-xl">
+              Coming soon. <a className="text-brand-yellow" href="https://instagram.com/wellsuitedband" target='_blank'>Book us?</a>
+            </p>
+          </div>
+
+          {/* Show with full text link */}
           <div className="hidden">
             <a href='https://stonechurchvt.com/events#/events/161604' target="_blank">
               <p className="text-2xl">1/23/2026 @ Stone Church</p>
@@ -173,9 +179,13 @@ export default function Home() {
               Details and tickets <span className="text-brand-yellow">here!</span>
             </a>
           </div>
-          <div className="hidden">
-            <p className="text-2xl">4/4/2026 @ 9pm</p>
-            <p className="text-lg"><a href='https://www.facebook.com/events/1901518910469540/' target="_blank" className="text-brand-yellow">Bar 580 in Brattleboro, VT</a></p>
+
+          {/* Show with simple link or no link */}
+          <div className="">
+            <p className="text-xl">7/6/2026 @ Greenfield Fireworks</p>
+            <p className="">
+              Details on the <a href='https://www.greenfieldrecreation.com/fireworks.html' target="_blank" className="text-brand-yellow">Greenfield Recreation site</a>.
+            </p>
           </div>
         </div>
 
