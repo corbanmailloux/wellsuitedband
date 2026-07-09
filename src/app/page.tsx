@@ -115,6 +115,46 @@ export default function Home() {
           </a>
         </div>
 
+        {/* Next Show Callout */}
+        <div className="bg-black bg-opacity-75 p-6 rounded-lg max-w-md mx-auto mb-4">
+          <h2 className="text-3xl font-bold text-brand-yellow mb-4">Upcoming Shows</h2>
+
+          <div className="space-y-3 text-left">
+            <a
+              href="https://nohodna.org/the-taste-of-northampton/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block rounded-lg border border-brand-yellow/60 bg-white/10 p-4 transition-colors hover:bg-white/20"
+            >
+              <p className="text-sm font-semibold tracking-wide text-brand-yellow">09/13/2026</p>
+              <p className="text-xl font-semibold">Taste of Northampton</p>
+              <p className="mt-1 text-sm text-white/80">Northampton, MA. More details coming soon.</p>
+            </a>
+
+            <a
+              href="https://www.thebige.com/events/2026/well-suited"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block rounded-lg border border-brand-yellow/60 bg-white/10 p-4 transition-colors hover:bg-white/20"
+            >
+              <p className="text-sm font-semibold tracking-wide text-brand-yellow">09/24/2026 @ 3:00 PM</p>
+              <p className="text-xl font-semibold">The Big E</p>
+              <p className="mt-1 text-sm text-white/80">The E Stage. View event details.</p>
+            </a>
+
+            <a
+              href="https://garlicandarts.org/entertainment-and-activities/music/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block rounded-lg border border-brand-yellow/60 bg-white/10 p-4 transition-colors hover:bg-white/20"
+            >
+              <p className="text-sm font-semibold tracking-wide text-brand-yellow">09/26/2026 @ 3:30 PM</p>
+              <p className="text-xl font-semibold">North Quabbin Garlic & Arts Festival </p>
+              <p className="mt-1 text-sm text-white/80">Orange, MA. View event details.</p>
+            </a>
+          </div>
+        </div>
+
         {/* Band News Callout */}
         <div className="bg-black bg-opacity-75 p-6 rounded-lg max-w-md mx-auto mb-4">
           <h2 className="text-2xl font-bold text-brand-yellow mb-4">"Wait Forever" Streaming Now</h2>
@@ -157,35 +197,6 @@ export default function Home() {
             >
               <SiApplemusic className="w-8 h-8 md:w-12 md:h-12" />
             </a>
-          </div>
-        </div>
-
-        {/* Next Show Callout */}
-        <div className="bg-black bg-opacity-75 p-6 rounded-lg max-w-md mx-auto mb-4">
-          <h2 className="text-3xl font-bold text-brand-yellow mb-4">Upcoming Shows</h2>
-
-          {/* Default when no shows are scheduled */}
-          <div className="hidden">
-            <p className="text-xl">
-              Coming soon. <a className="text-brand-yellow" href="https://instagram.com/wellsuitedband" target='_blank'>Book us?</a>
-            </p>
-          </div>
-
-          {/* Show with full text link */}
-          <div className="hidden">
-            <a href='https://stonechurchvt.com/events#/events/161604' target="_blank">
-              <p className="text-2xl">1/23/2026 @ Stone Church</p>
-              with Madaila in Brattleboro, VT<br />
-              Details and tickets <span className="text-brand-yellow">here!</span>
-            </a>
-          </div>
-
-          {/* Show with simple link or no link */}
-          <div className="">
-            <p className="text-xl">7/6/2026 @ Greenfield Fireworks</p>
-            <p className="">
-              Details on the <a href='https://www.greenfieldrecreation.com/fireworks.html' target="_blank" className="text-brand-yellow">Greenfield Recreation site</a>.
-            </p>
           </div>
         </div>
 
