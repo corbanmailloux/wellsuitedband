@@ -1,23 +1,16 @@
-import Image from 'next/image'
 import Link from 'next/link'
+import BackgroundImage from './components/BackgroundImage'
 
 export default function NotFound() {
   return (
     <main className="min-h-screen relative">
       {/* Background color fallback */}
       <div className="fixed inset-0 bg-black"></div>
-
-      {/* Full-screen background image */}
-      <div className="fixed inset-0 opacity-50">
-        <Image
-          src="/images/optimized/tough_guys.avif"
-          alt="Well Suited Band - Tough Guys"
-          fill
-          style={{ objectFit: 'cover' }}
-          priority
-          sizes="100vw"
-        />
-      </div>
+      <BackgroundImage
+        imageSrc="/images/optimized/tough_guys.avif"
+        alt="Well Suited Band - Tough Guys"
+        containerClass="fixed inset-0 opacity-50"
+      />
 
       {/* Content */}
       <div className="relative min-h-screen flex flex-col items-center justify-center p-4 text-brand-white text-center">

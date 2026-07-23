@@ -4,12 +4,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { SiInstagram, SiFacebook, SiYoutube, SiSpotify, SiTiktok, SiApplemusic } from 'react-icons/si'
+import BackgroundImage from '../components/BackgroundImage'
 
 export default function About() {
   const router = useRouter()
 
   const handleBackgroundClick = (e: React.MouseEvent) => {
-    // Only navigate if clicking the backdrop (not the modal content)
     if (e.target === e.currentTarget) {
       router.push('/')
     }
@@ -17,36 +17,14 @@ export default function About() {
 
   return (
     <main className="min-h-screen relative">
-      {/* Full-screen background image */}
-      <div className="fixed inset-0 z-0">
-        {/* Portrait/Mobile background */}
-        <div className="relative block md:hidden w-full h-full">
-          <Image
-            src="/images/optimized/background-portrait.avif"
-            alt="Well Suited Band"
-            fill
-            style={{ objectFit: 'cover' }}
-            priority
-            quality={85}
-          />
-        </div>
-        {/* Landscape/Desktop background */}
-        <div className="relative hidden md:block w-full h-full">
-          <Image
-            src="/images/optimized/background.avif"
-            alt="Well Suited Band"
-            fill
-            style={{ objectFit: 'cover' }}
-            priority
-            quality={85}
-          />
-        </div>
-        {/* Dark overlay */}
-        <div
-          className="absolute inset-0 bg-black/70"
-          onClick={handleBackgroundClick}
-        />
-      </div>
+      <BackgroundImage
+        imageSrc="/images/optimized/background.avif"
+        portraitSrc="/images/optimized/background-portrait.avif"
+        alt="Well Suited Band"
+        containerClass="fixed inset-0 z-0"
+        overlayClass="bg-black/70"
+        overlayClick={handleBackgroundClick}
+      />
 
       {/* Content */}
       <div

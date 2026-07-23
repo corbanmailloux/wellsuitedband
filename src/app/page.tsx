@@ -1,38 +1,17 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { SiInstagram, SiFacebook, SiYoutube, SiSpotify, SiTiktok, SiApplemusic } from 'react-icons/si'
+import BackgroundImage from './components/BackgroundImage'
 
 export default function Home() {
   return (
     <main className="min-h-screen relative">
-      {/* Background color fallback */}
       <div className="fixed inset-0 bg-black"></div>
-
-      {/* Full-screen background image */}
-      <div className="fixed inset-0 opacity-60">
-        {/* Portrait/Mobile background */}
-        <div className="relative block md:hidden w-full h-full">
-          <Image
-            src="/images/optimized/background-portrait.avif"
-            alt="Well Suited Band"
-            fill
-            style={{ objectFit: 'cover' }}
-            priority
-            quality={85}
-          />
-        </div>
-        {/* Landscape/Desktop background */}
-        <div className="relative hidden md:block w-full h-full">
-          <Image
-            src="/images/optimized/background.avif"
-            alt="Well Suited Band"
-            fill
-            style={{ objectFit: 'cover' }}
-            priority
-            quality={85}
-          />
-        </div>
-      </div>
+      <BackgroundImage
+        imageSrc="/images/optimized/background.avif"
+        portraitSrc="/images/optimized/background-portrait.avif"
+        alt="Well Suited Band"
+      />
 
       {/* Content */}
       <div className="relative min-h-screen flex flex-col items-center justify-center p-4 text-brand-white text-center">
