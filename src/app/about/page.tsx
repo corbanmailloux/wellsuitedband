@@ -128,7 +128,7 @@ export default function About() {
               <a
                 href="https://instagram.com/wellsuitedband"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="me noopener"
                 className="text-brand-white hover:text-brand transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
                 <SiInstagram className="w-6 h-6" />
@@ -137,7 +137,7 @@ export default function About() {
               <a
                 href="https://www.facebook.com/wellsuitedband"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="me noopener"
                 className="text-brand-white hover:text-brand transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
                 <SiFacebook className="w-6 h-6" />
@@ -146,7 +146,7 @@ export default function About() {
               <a
                 href="https://www.tiktok.com/@wellsuitedband"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="me noopener"
                 className="text-brand-white hover:text-brand transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
                 <SiTiktok className="w-6 h-6" />
@@ -155,7 +155,7 @@ export default function About() {
               <a
                 href="https://www.youtube.com/@wellsuitedband"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="me noopener"
                 className="text-brand-white hover:text-brand transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
                 <SiYoutube className="w-6 h-6" />
@@ -164,7 +164,7 @@ export default function About() {
               <a
                 href="https://open.spotify.com/artist/7rIYaPPZCDQTTFi9zhX6no"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="me noopener"
                 className="text-brand-white hover:text-brand transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
                 <SiSpotify className="w-6 h-6" />
@@ -173,7 +173,7 @@ export default function About() {
               <a
                 href="https://music.apple.com/us/artist/well-suited/1526096406"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="me noopener"
                 className="text-brand-white hover:text-brand transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
                 <SiApplemusic className="w-6 h-6" />

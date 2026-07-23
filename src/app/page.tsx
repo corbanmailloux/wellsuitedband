@@ -56,7 +56,7 @@ export default function Home() {
           <a
             href="https://instagram.com/wellsuitedband"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="me noopener"
             aria-label="Instagram"
             title="Instagram"
             className="text-brand-white hover:text-brand transition-colors"
@@ -66,7 +66,7 @@ export default function Home() {
           <a
             href="https://www.facebook.com/wellsuitedband"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="me noopener"
             aria-label="Facebook"
             title="Facebook"
             className="text-brand-white hover:text-brand transition-colors"
@@ -76,7 +76,7 @@ export default function Home() {
           <a
             href="https://www.tiktok.com/@wellsuitedband"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="me noopener"
             aria-label="TikTok"
             title="TikTok"
             className="text-brand-white hover:text-brand transition-colors"
@@ -86,7 +86,7 @@ export default function Home() {
           <a
             href="https://www.youtube.com/@wellsuitedband"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="me noopener"
             aria-label="YouTube"
             title="YouTube"
             className="text-brand-white hover:text-brand transition-colors"
@@ -96,7 +96,7 @@ export default function Home() {
           <a
             href="https://open.spotify.com/artist/7rIYaPPZCDQTTFi9zhX6no"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="me noopener"
             aria-label="Spotify"
             title="Spotify"
             className="text-brand-white hover:text-brand transition-colors"
@@ -106,7 +106,7 @@ export default function Home() {
           <a
             href="https://music.apple.com/us/artist/well-suited/1526096406"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="me noopener"
             aria-label="Apple Music"
             title="Apple Music"
             className="text-brand-white hover:text-brand transition-colors"
@@ -123,7 +123,7 @@ export default function Home() {
             <a
               href="https://nohodna.org/the-taste-of-northampton/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener"
               className="block rounded-lg border border-brand/60 bg-brand-white/10 p-4 transition-colors hover:bg-brand-white/20"
             >
               <p className="text-sm font-semibold tracking-wide text-brand">09/13/2026</p>
@@ -134,7 +134,7 @@ export default function Home() {
             <a
               href="https://www.thebige.com/events/2026/well-suited"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener"
               className="block rounded-lg border border-brand/60 bg-brand-white/10 p-4 transition-colors hover:bg-brand-white/20"
             >
               <p className="text-sm font-semibold tracking-wide text-brand">09/24/2026 @ 3:00 PM</p>
@@ -145,7 +145,7 @@ export default function Home() {
             <a
               href="https://garlicandarts.org/entertainment-and-activities/music/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener"
               className="block rounded-lg border border-brand/60 bg-brand-white/10 p-4 transition-colors hover:bg-brand-white/20"
             >
               <p className="text-sm font-semibold tracking-wide text-brand">09/26/2026 @ 3:30 PM</p>
@@ -156,7 +156,7 @@ export default function Home() {
             <a
               href="https://www.incandescentbrewing.com/events"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener"
               className="block rounded-lg border border-brand/60 bg-brand-white/10 p-4 transition-colors hover:bg-brand-white/20"
             >
               <p className="text-sm font-semibold tracking-wide text-brand">10/03/2026 @ 6:00 PM</p>
@@ -174,7 +174,7 @@ export default function Home() {
               <a
               href="https://open.spotify.com/track/4HnHQGLcZpzUkUWnyZqCII"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener"
             >
               <Image
                 src="/images/optimized/cover-wait-forever.avif"
@@ -182,7 +182,7 @@ export default function Home() {
                 width={600}
                 height={600}
                 className="w-full h-auto rounded-lg shadow-md"
-                priority
+                loading="lazy"
               />
               </a>
             </div>
@@ -191,7 +191,7 @@ export default function Home() {
             <a
               href="https://open.spotify.com/track/4HnHQGLcZpzUkUWnyZqCII"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener"
               aria-label="Wait Forever on Spotify"
               title="Wait Forever on Spotify"
               className="text-brand-white hover:text-[#1ED760] transition-colors"
@@ -201,7 +201,7 @@ export default function Home() {
             <a
               href="https://music.apple.com/us/album/wait-forever/6770508565"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener"
               aria-label="Wait Forever on Apple Music"
               title="Wait Forever on Apple Music"
               className="text-brand-white hover:text-[#FF4E6B] transition-colors"
