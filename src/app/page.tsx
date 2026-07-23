@@ -2,6 +2,34 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { SiInstagram, SiFacebook, SiYoutube, SiSpotify, SiTiktok, SiApplemusic } from 'react-icons/si'
 import BackgroundImage from './components/BackgroundImage'
+import ShowCard from './components/ShowCard'
+
+const shows = [
+  {
+    href: 'https://nohodna.org/the-taste-of-northampton/',
+    date: '09/13/2026',
+    name: 'Taste of Northampton',
+    description: 'Northampton, MA. More details coming soon.',
+  },
+  {
+    href: 'https://www.thebige.com/events/2026/well-suited',
+    date: '09/24/2026 @ 3:00 PM',
+    name: 'The Big E (on the E Stage)',
+    description: 'West Springfield, MA. View event details.',
+  },
+  {
+    href: 'https://garlicandarts.org/entertainment-and-activities/music/',
+    date: '09/26/2026 @ 3:30 PM',
+    name: 'North Quabbin Garlic & Arts Festival',
+    description: 'Orange, MA. View event details.',
+  },
+  {
+    href: 'https://www.incandescentbrewing.com/events',
+    date: '10/03/2026 @ 6:00 PM',
+    name: 'Incandescent Brewing',
+    description: 'Bernardston, MA. Event details coming soon.',
+  },
+]
 
 export default function Home() {
   return (
@@ -99,49 +127,9 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-brand mb-4">Upcoming Shows</h2>
 
           <div className="space-y-3 text-left">
-            <a
-              href="https://nohodna.org/the-taste-of-northampton/"
-              target="_blank"
-              rel="noopener"
-              className="block rounded-lg border border-brand/60 bg-brand-white/10 p-4 transition-colors hover:bg-brand-white/20"
-            >
-              <p className="text-sm font-semibold tracking-wide text-brand">09/13/2026</p>
-              <p className="text-xl font-semibold">Taste of Northampton</p>
-              <p className="mt-1 text-sm text-white/80">Northampton, MA. More details coming soon.</p>
-            </a>
-
-            <a
-              href="https://www.thebige.com/events/2026/well-suited"
-              target="_blank"
-              rel="noopener"
-              className="block rounded-lg border border-brand/60 bg-brand-white/10 p-4 transition-colors hover:bg-brand-white/20"
-            >
-              <p className="text-sm font-semibold tracking-wide text-brand">09/24/2026 @ 3:00 PM</p>
-              <p className="text-xl font-semibold">The Big E (on the E Stage)</p>
-              <p className="mt-1 text-sm text-white/80">West Springfield, MA. View event details.</p>
-            </a>
-
-            <a
-              href="https://garlicandarts.org/entertainment-and-activities/music/"
-              target="_blank"
-              rel="noopener"
-              className="block rounded-lg border border-brand/60 bg-brand-white/10 p-4 transition-colors hover:bg-brand-white/20"
-            >
-              <p className="text-sm font-semibold tracking-wide text-brand">09/26/2026 @ 3:30 PM</p>
-              <p className="text-xl font-semibold">North Quabbin Garlic & Arts Festival </p>
-              <p className="mt-1 text-sm text-white/80">Orange, MA. View event details.</p>
-            </a>
-
-            <a
-              href="https://www.incandescentbrewing.com/events"
-              target="_blank"
-              rel="noopener"
-              className="block rounded-lg border border-brand/60 bg-brand-white/10 p-4 transition-colors hover:bg-brand-white/20"
-            >
-              <p className="text-sm font-semibold tracking-wide text-brand">10/03/2026 @ 6:00 PM</p>
-              <p className="text-xl font-semibold">Incandescent Brewing</p>
-              <p className="mt-1 text-sm text-white/80">Bernardston, MA. Event details coming soon.</p>
-            </a>
+            {shows.map((show) => (
+              <ShowCard key={show.href} {...show} />
+            ))}
           </div>
         </div>
 
