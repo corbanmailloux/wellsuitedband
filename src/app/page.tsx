@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="min-h-screen relative">
       {/* Background color fallback */}
-      <div className="fixed inset-0 bg-brand-black"></div>
+      <div className="fixed inset-0 bg-black"></div>
 
       {/* Full-screen background image */}
       <div className="fixed inset-0 opacity-60">
@@ -116,7 +116,7 @@ export default function Home() {
         </div>
 
         {/* Next Show Callout */}
-        <div className="bg-brand-black bg-opacity-75 p-6 rounded-lg max-w-md mx-auto mb-4">
+        <div className="bg-black bg-opacity-75 p-6 rounded-lg max-w-md mx-auto mb-4">
           <h2 className="text-3xl font-bold text-brand mb-4">Upcoming Shows</h2>
 
           <div className="space-y-3 text-left">
@@ -167,7 +167,7 @@ export default function Home() {
         </div>
 
         {/* Band News Callout */}
-        <div className="bg-brand-black bg-opacity-75 p-6 rounded-lg max-w-md mx-auto mb-4">
+        <div className="bg-black bg-opacity-75 p-6 rounded-lg max-w-md mx-auto mb-4">
           <h2 className="text-2xl font-bold text-brand mb-4">"Wait Forever" Streaming Now</h2>
           <div className="flex justify-center mb-4">
             <div className="w-60 md:w-80">
@@ -214,7 +214,7 @@ export default function Home() {
         {/* About Link */}
         <Link
           href="/about"
-          className="inline-block px-6 py-2 border-2 bg-brand-black bg-opacity-40 border-brand text-brand hover:bg-brand hover:text-brand-black transition-colors rounded-lg text-lg"
+          className="inline-block px-6 py-2 border-2 bg-black bg-opacity-40 border-brand text-brand hover:bg-brand hover:text-brand-black transition-colors rounded-lg text-lg"
         >
           About Us
         </Link>
