@@ -8,6 +8,7 @@
     "build": "next build",
     "export": "next build && next export",
     "start": "next start",
+    "optimize-images": "node scripts/optimize-images.js",
     "lint": "next lint"
   },
   "repository": {

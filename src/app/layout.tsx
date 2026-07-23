@@ -9,9 +9,9 @@ export const metadata: Metadata = {
   title: 'Well Suited',
   description: 'Well Suited - 6-Piece Americana Rock Band',
   icons: {
-    icon: '/images/logo-white-bg.svg',
-    shortcut: '/images/logo-white-bg.svg',
-    apple: '/images/logo-white-bg.svg',
+    icon: '/images/optimized/brand-circle.png',
+    shortcut: '/images/optimized/brand-circle.png',
+    apple: '/images/optimized/brand-circle.png',
   },
   openGraph: {
     title: 'Well Suited',
