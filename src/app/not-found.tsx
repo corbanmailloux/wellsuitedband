@@ -21,7 +21,7 @@ export default function NotFound() {
 
       {/* Content */}
       <div className="relative min-h-screen flex flex-col items-center justify-center p-4 text-brand-white text-center">
-        <div className="bg-black bg-opacity-75 p-8 rounded-lg max-w-md mx-auto backdrop-blur-sm">
+        <div className="bg-black/75 p-8 rounded-lg max-w-md mx-auto backdrop-blur-xs">
           <h1 className="text-6xl font-bold mb-4">404</h1>
           <p className="text-xl mb-8">Page not found. You're not supposed to be here.</p>
           <Link
