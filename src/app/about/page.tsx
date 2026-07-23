@@ -43,7 +43,7 @@ export default function About() {
         </div>
         {/* Dark overlay */}
         <div
-          className="absolute inset-0 bg-black bg-opacity-70"
+          className="absolute inset-0 bg-brand-black bg-opacity-70"
           onClick={handleBackgroundClick}
         />
       </div>
@@ -55,14 +55,14 @@ export default function About() {
         {/* Back to Home */}
         <Link
           href="/"
-          className="inline-block mb-8 text-white hover:text-brand-yellow transition-colors"
+          className="inline-block mb-8 text-brand-white hover:text-brand transition-colors"
         >
           ← Back to Home
         </Link>
 
         {/* About Content */}
-        <div className="max-w-3xl mx-auto bg-black bg-opacity-90 p-8 rounded-lg text-white backdrop-blur-sm">
-          <h1 className="text-4xl font-bold text-brand-yellow mb-6">About Well Suited</h1>
+        <div className="max-w-3xl mx-auto bg-brand-black bg-opacity-90 p-8 rounded-lg text-brand-white backdrop-blur-sm">
+          <h1 className="text-4xl font-bold text-brand mb-6">About Well Suited</h1>
 
           <div className="prose prose-invert" onClick={(e) => e.stopPropagation()}>
             <p className="mb-6">
@@ -84,7 +84,7 @@ export default function About() {
             </div>
 
             {/* Band Members */}
-            <h2 className="text-2xl font-bold text-brand-yellow mb-4">The Band</h2>
+            <h2 className="text-2xl font-bold text-brand mb-4">The Band</h2>
             <div className="grid grid-rows-3 md:grid-rows-2 grid-flow-col gap-3 mb-8">
               <div className="text-center">
                 <h3 className="font-bold">Mike Parker</h3>
@@ -112,24 +112,24 @@ export default function About() {
               </div>
             </div>
 
-            <h2 className="text-2xl font-bold text-brand-yellow mt-8 mb-4">Contact Us</h2>
+            <h2 className="text-2xl font-bold text-brand mt-8 mb-4">Contact Us</h2>
             <p className="mb-4">
               For bookings and inquiries, please contact us at:{' '}
               <a
                 href="mailto:booking@wellsuitedband.com"
-                className="text-brand-yellow hover:underline"
+                className="text-brand hover:underline"
               >
                 booking@wellsuitedband.com
               </a>
             </p>
 
-            <h2 className="text-2xl font-bold text-brand-yellow mt-8 mb-4">Follow Us</h2>
+            <h2 className="text-2xl font-bold text-brand mt-8 mb-4">Follow Us</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 md:grid-rows-2 gap-4 mb-8">
               <a
                 href="https://instagram.com/wellsuitedband"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-brand-yellow transition-colors flex items-center justify-center gap-2 w-full h-full"
+                className="text-brand-white hover:text-brand transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
                 <SiInstagram className="w-6 h-6" />
                 Instagram
@@ -138,7 +138,7 @@ export default function About() {
                 href="https://www.facebook.com/wellsuitedband"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-brand-yellow transition-colors flex items-center justify-center gap-2 w-full h-full"
+                className="text-brand-white hover:text-brand transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
                 <SiFacebook className="w-6 h-6" />
                 Facebook
@@ -147,7 +147,7 @@ export default function About() {
                 href="https://www.tiktok.com/@wellsuitedband"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-brand-yellow transition-colors flex items-center justify-center gap-2 w-full h-full"
+                className="text-brand-white hover:text-brand transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
                 <SiTiktok className="w-6 h-6" />
                 TikTok
@@ -156,7 +156,7 @@ export default function About() {
                 href="https://www.youtube.com/@wellsuitedband"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-brand-yellow transition-colors flex items-center justify-center gap-2 w-full h-full"
+                className="text-brand-white hover:text-brand transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
                 <SiYoutube className="w-6 h-6" />
                 YouTube
@@ -165,7 +165,7 @@ export default function About() {
                 href="https://open.spotify.com/artist/7rIYaPPZCDQTTFi9zhX6no"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-brand-yellow transition-colors flex items-center justify-center gap-2 w-full h-full"
+                className="text-brand-white hover:text-brand transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
                 <SiSpotify className="w-6 h-6" />
                 Spotify
@@ -174,7 +174,7 @@ export default function About() {
                 href="https://music.apple.com/us/artist/well-suited/1526096406"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-brand-yellow transition-colors flex items-center justify-center gap-2 w-full h-full"
+                className="text-brand-white hover:text-brand transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
                 <SiApplemusic className="w-6 h-6" />
                 Apple Music

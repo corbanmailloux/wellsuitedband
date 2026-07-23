@@ -10,7 +10,7 @@ export async function GET(request: NextRequest) {
     height: 630,
   }
 
-  const logoUrl = new URL('/images/logo-white-bg.svg', 'https://wellsuitedband.com').toString()
+  const logoUrl = new URL('/images/optimized/brand-circle.png', 'https://wellsuitedband.com').toString()
 
   try {
     return new ImageResponse(
@@ -49,7 +49,7 @@ export async function GET(request: NextRequest) {
           <div
             style={{
               fontSize: 30,
-              color: '#EDAA49', // brand-yellow color
+              color: '#1c9bb1',
               marginTop: 10,
             }}
           >

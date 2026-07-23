@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="min-h-screen relative">
       {/* Background color fallback */}
-      <div className="fixed inset-0 bg-black"></div>
+      <div className="fixed inset-0 bg-brand-black"></div>
 
       {/* Full-screen background image */}
       <div className="fixed inset-0 opacity-60">
@@ -35,12 +35,12 @@ export default function Home() {
       </div>
 
       {/* Content */}
-      <div className="relative min-h-screen flex flex-col items-center justify-center p-4 text-white text-center">
+      <div className="relative min-h-screen flex flex-col items-center justify-center p-4 text-brand-white text-center">
         {/* Logo */}
-        <div className="w-60 h-60 mb-2 relative">
+        <div className="size-60 mb-6 relative md:size-80">
           <Image
-            src="/images/logo-white-bg.svg"
-            alt="Well Suited Logo"
+            src="/images/optimized/brand-circle.avif"
+            alt="Well Suited"
             fill
             style={{ objectFit: 'contain' }}
             fetchPriority="high"
@@ -48,8 +48,8 @@ export default function Home() {
           />
         </div>
 
-        {/* Band Name */}
-        <h1 className="text-4xl font-bold mb-6 text-white">Well Suited</h1>
+        {/* Band Name - Dropped with new branding that contains the name. */}
+        {/* <h1 className="text-4xl font-bold mb-6 text-brand-white">Well Suited</h1> */}
 
         {/* Social Links */}
         <div className="flex space-x-6 md:space-x-12 mb-8 items-center justify-center">
@@ -59,7 +59,7 @@ export default function Home() {
             rel="noopener noreferrer"
             aria-label="Instagram"
             title="Instagram"
-            className="text-white hover:text-brand-yellow transition-colors"
+            className="text-brand-white hover:text-brand transition-colors"
           >
             <SiInstagram className="w-8 h-8 md:w-12 md:h-12" />
           </a>
@@ -69,7 +69,7 @@ export default function Home() {
             rel="noopener noreferrer"
             aria-label="Facebook"
             title="Facebook"
-            className="text-white hover:text-brand-yellow transition-colors"
+            className="text-brand-white hover:text-brand transition-colors"
           >
             <SiFacebook className="w-8 h-8 md:w-12 md:h-12" />
           </a>
@@ -79,7 +79,7 @@ export default function Home() {
             rel="noopener noreferrer"
             aria-label="TikTok"
             title="TikTok"
-            className="text-white hover:text-brand-yellow transition-colors"
+            className="text-brand-white hover:text-brand transition-colors"
           >
             <SiTiktok className="w-8 h-8 md:w-12 md:h-12" />
           </a>
@@ -89,7 +89,7 @@ export default function Home() {
             rel="noopener noreferrer"
             aria-label="YouTube"
             title="YouTube"
-            className="text-white hover:text-brand-yellow transition-colors"
+            className="text-brand-white hover:text-brand transition-colors"
           >
             <SiYoutube className="w-8 h-8 md:w-12 md:h-12" />
           </a>
@@ -99,7 +99,7 @@ export default function Home() {
             rel="noopener noreferrer"
             aria-label="Spotify"
             title="Spotify"
-            className="text-white hover:text-brand-yellow transition-colors"
+            className="text-brand-white hover:text-brand transition-colors"
           >
             <SiSpotify className="w-8 h-8 md:w-12 md:h-12" />
           </a>
@@ -109,24 +109,24 @@ export default function Home() {
             rel="noopener noreferrer"
             aria-label="Apple Music"
             title="Apple Music"
-            className="text-white hover:text-brand-yellow transition-colors"
+            className="text-brand-white hover:text-brand transition-colors"
           >
             <SiApplemusic className="w-8 h-8 md:w-12 md:h-12" />
           </a>
         </div>
 
         {/* Next Show Callout */}
-        <div className="bg-black bg-opacity-75 p-6 rounded-lg max-w-md mx-auto mb-4">
-          <h2 className="text-3xl font-bold text-brand-yellow mb-4">Upcoming Shows</h2>
+        <div className="bg-brand-black bg-opacity-75 p-6 rounded-lg max-w-md mx-auto mb-4">
+          <h2 className="text-3xl font-bold text-brand mb-4">Upcoming Shows</h2>
 
           <div className="space-y-3 text-left">
             <a
               href="https://nohodna.org/the-taste-of-northampton/"
               target="_blank"
               rel="noopener noreferrer"
-              className="block rounded-lg border border-brand-yellow/60 bg-white/10 p-4 transition-colors hover:bg-white/20"
+              className="block rounded-lg border border-brand/60 bg-brand-white/10 p-4 transition-colors hover:bg-brand-white/20"
             >
-              <p className="text-sm font-semibold tracking-wide text-brand-yellow">09/13/2026</p>
+              <p className="text-sm font-semibold tracking-wide text-brand">09/13/2026</p>
               <p className="text-xl font-semibold">Taste of Northampton</p>
               <p className="mt-1 text-sm text-white/80">Northampton, MA. More details coming soon.</p>
             </a>
@@ -135,9 +135,9 @@ export default function Home() {
               href="https://www.thebige.com/events/2026/well-suited"
               target="_blank"
               rel="noopener noreferrer"
-              className="block rounded-lg border border-brand-yellow/60 bg-white/10 p-4 transition-colors hover:bg-white/20"
+              className="block rounded-lg border border-brand/60 bg-brand-white/10 p-4 transition-colors hover:bg-brand-white/20"
             >
-              <p className="text-sm font-semibold tracking-wide text-brand-yellow">09/24/2026 @ 3:00 PM</p>
+              <p className="text-sm font-semibold tracking-wide text-brand">09/24/2026 @ 3:00 PM</p>
               <p className="text-xl font-semibold">The Big E (on the E Stage)</p>
               <p className="mt-1 text-sm text-white/80">West Springfield, MA. View event details.</p>
             </a>
@@ -146,9 +146,9 @@ export default function Home() {
               href="https://garlicandarts.org/entertainment-and-activities/music/"
               target="_blank"
               rel="noopener noreferrer"
-              className="block rounded-lg border border-brand-yellow/60 bg-white/10 p-4 transition-colors hover:bg-white/20"
+              className="block rounded-lg border border-brand/60 bg-brand-white/10 p-4 transition-colors hover:bg-brand-white/20"
             >
-              <p className="text-sm font-semibold tracking-wide text-brand-yellow">09/26/2026 @ 3:30 PM</p>
+              <p className="text-sm font-semibold tracking-wide text-brand">09/26/2026 @ 3:30 PM</p>
               <p className="text-xl font-semibold">North Quabbin Garlic & Arts Festival </p>
               <p className="mt-1 text-sm text-white/80">Orange, MA. View event details.</p>
             </a>
@@ -167,8 +167,8 @@ export default function Home() {
         </div>
 
         {/* Band News Callout */}
-        <div className="bg-black bg-opacity-75 p-6 rounded-lg max-w-md mx-auto mb-4">
-          <h2 className="text-2xl font-bold text-brand-yellow mb-4">"Wait Forever" Streaming Now</h2>
+        <div className="bg-brand-black bg-opacity-75 p-6 rounded-lg max-w-md mx-auto mb-4">
+          <h2 className="text-2xl font-bold text-brand mb-4">"Wait Forever" Streaming Now</h2>
           <div className="flex justify-center mb-4">
             <div className="w-60 md:w-80">
               <a
@@ -194,7 +194,7 @@ export default function Home() {
               rel="noopener noreferrer"
               aria-label="Wait Forever on Spotify"
               title="Wait Forever on Spotify"
-              className="text-white hover:text-[#1ED760] transition-colors"
+              className="text-brand-white hover:text-[#1ED760] transition-colors"
             >
               <SiSpotify className="w-8 h-8 md:w-12 md:h-12" />
             </a>
@@ -204,7 +204,7 @@ export default function Home() {
               rel="noopener noreferrer"
               aria-label="Wait Forever on Apple Music"
               title="Wait Forever on Apple Music"
-              className="text-white hover:text-[#FF4E6B] transition-colors"
+              className="text-brand-white hover:text-[#FF4E6B] transition-colors"
             >
               <SiApplemusic className="w-8 h-8 md:w-12 md:h-12" />
             </a>
@@ -214,7 +214,7 @@ export default function Home() {
         {/* About Link */}
         <Link
           href="/about"
-          className="inline-block px-6 py-2 border-2 bg-black bg-opacity-40 border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-black transition-colors rounded-lg text-lg"
+          className="inline-block px-6 py-2 border-2 bg-brand-black bg-opacity-40 border-brand text-brand hover:bg-brand hover:text-brand-black transition-colors rounded-lg text-lg"
         >
           About Us
         </Link>

@@ -6,6 +6,7 @@ async function optimizeImage(inputName, outputName, maxWidth, options = {}) {
     const outputPath = path.join(process.cwd(), 'public', 'images', 'optimized', outputName);
     const baseName = outputName.replace(/\.[^.]+$/, '');
     const outputPathAvif = path.join(process.cwd(), 'public', 'images', 'optimized', `${baseName}.avif`);
+    const outputExt = path.extname(outputName).toLowerCase();
 
     try {
         let pipeline = sharp(inputPath);
@@ -41,15 +42,26 @@ async function optimizeImage(inputName, outputName, maxWidth, options = {}) {
             ]);
         }
 
-        // Write AVIF first (smaller, modern format), then keep JPEG fallback
+        // Write AVIF first (smaller, modern format), then keep a matching fallback format.
         await pipeline.clone().avif({
             quality: 60
         }).toFile(outputPathAvif);
 
-        await pipeline.clone().jpeg({
-            quality: 80,
-            progressive: true
-        }).toFile(outputPath);
+        if (outputExt === '.png') {
+            await pipeline.clone().png({
+                compressionLevel: 9,
+                adaptiveFiltering: true
+            }).toFile(outputPath);
+        } else if (outputExt === '.webp') {
+            await pipeline.clone().webp({
+                quality: 80
+            }).toFile(outputPath);
+        } else {
+            await pipeline.clone().jpeg({
+                quality: 80,
+                progressive: true
+            }).toFile(outputPath);
+        }
 
         console.log(`${baseName}.avif and ${outputName} optimized successfully!`);
     } catch (error) {
@@ -78,6 +90,9 @@ async function optimizeAllImages() {
 
     // Cover Art. Source is 600x600.
     await optimizeImage('cover-wait-forever.jpg', 'cover-wait-forever.jpg', 600);
+
+    // Brand logo optimized for homepage display and site icon usage.
+    await optimizeImage('rebrand/brand-circle.png', 'brand-circle.png', 600);
 }
 
 optimizeAllImages();
