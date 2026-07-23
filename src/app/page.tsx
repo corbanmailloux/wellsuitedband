@@ -157,9 +157,9 @@ export default function Home() {
               href="https://www.incandescentbrewing.com/events"
               target="_blank"
               rel="noopener noreferrer"
-              className="block rounded-lg border border-brand-yellow/60 bg-white/10 p-4 transition-colors hover:bg-white/20"
+              className="block rounded-lg border border-brand/60 bg-brand-white/10 p-4 transition-colors hover:bg-brand-white/20"
             >
-              <p className="text-sm font-semibold tracking-wide text-brand-yellow">10/03/2026 @ 6:00 PM</p>
+              <p className="text-sm font-semibold tracking-wide text-brand">10/03/2026 @ 6:00 PM</p>
               <p className="text-xl font-semibold">Incandescent Brewing</p>
               <p className="mt-1 text-sm text-white/80">Bernardston, MA. Event details coming soon.</p>
             </a>
