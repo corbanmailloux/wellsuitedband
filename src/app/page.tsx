@@ -138,8 +138,8 @@ export default function Home() {
               className="block rounded-lg border border-brand-yellow/60 bg-white/10 p-4 transition-colors hover:bg-white/20"
             >
               <p className="text-sm font-semibold tracking-wide text-brand-yellow">09/24/2026 @ 3:00 PM</p>
-              <p className="text-xl font-semibold">The Big E</p>
-              <p className="mt-1 text-sm text-white/80">The E Stage. View event details.</p>
+              <p className="text-xl font-semibold">The Big E (on the E Stage)</p>
+              <p className="mt-1 text-sm text-white/80">West Springfield, MA. View event details.</p>
             </a>
 
             <a
@@ -151,6 +151,17 @@ export default function Home() {
               <p className="text-sm font-semibold tracking-wide text-brand-yellow">09/26/2026 @ 3:30 PM</p>
               <p className="text-xl font-semibold">North Quabbin Garlic & Arts Festival </p>
               <p className="mt-1 text-sm text-white/80">Orange, MA. View event details.</p>
+            </a>
+
+            <a
+              href="https://www.incandescentbrewing.com/events"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block rounded-lg border border-brand-yellow/60 bg-white/10 p-4 transition-colors hover:bg-white/20"
+            >
+              <p className="text-sm font-semibold tracking-wide text-brand-yellow">10/03/2026 @ 6:00 PM</p>
+              <p className="text-xl font-semibold">Incandescent Brewing</p>
+              <p className="mt-1 text-sm text-white/80">Bernardston, MA. Event details coming soon.</p>
             </a>
           </div>
         </div>
