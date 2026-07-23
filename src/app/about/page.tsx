@@ -43,7 +43,7 @@ export default function About() {
         </div>
         {/* Dark overlay */}
         <div
-          className="absolute inset-0 bg-black bg-opacity-70"
+          className="absolute inset-0 bg-black/70"
           onClick={handleBackgroundClick}
         />
       </div>
@@ -61,7 +61,7 @@ export default function About() {
         </Link>
 
         {/* About Content */}
-        <div className="max-w-3xl mx-auto bg-black bg-opacity-90 p-8 rounded-lg text-brand-white backdrop-blur-sm">
+        <div className="max-w-3xl mx-auto bg-black/90 p-8 rounded-lg text-brand-white backdrop-blur-xs">
           <h1 className="text-4xl font-bold text-brand mb-6">About Well Suited</h1>
 
           <div className="prose prose-invert" onClick={(e) => e.stopPropagation()}>
