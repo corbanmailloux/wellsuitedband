@@ -77,7 +77,7 @@ async function optimizeAllImages() {
     await optimizeImage('background-portrait.jpg', 'background-portrait.jpg', 1200);
 
     // OpenGraph image - exact dimensions
-    await optimizeImage('background.jpg', 'og-image.jpg', null, {
+    await optimizeImage('og-image.png', 'og-image.jpg', null, {
         width: 1200,
         height: 630,
     });
