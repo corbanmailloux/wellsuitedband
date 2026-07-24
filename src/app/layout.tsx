@@ -8,20 +8,21 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://wellsuitedband.com'),
   title: 'Well Suited',
   description: 'Well Suited - 6-Piece Americana Rock Band',
+
   alternates: {
     canonical: 'https://wellsuitedband.com',
   },
-  themeColor: '#0e0f11',
+
   icons: {
     icon: '/images/optimized/brand-circle.png',
     shortcut: '/images/optimized/brand-circle.png',
     apple: '/images/optimized/brand-circle.png',
   },
+
   openGraph: {
     title: 'Well Suited',
-    description: 'Six-piece Americana rock band known for high-energy shows and infectious good vibes',
-    // url: 'https://wellsuitedband.com',
-    url: 'https://rebrand-logo.wellsuitedband.pages.dev/',
+    description: 'Six-piece Americana rock band known for high-energy shows and infectious good vibes.',
+    url: 'https://wellsuitedband.com',
     siteName: 'Well Suited',
     images: [
       {
@@ -34,12 +35,13 @@ export const metadata: Metadata = {
     locale: 'en_US',
     type: 'website',
   },
+
   twitter: {
     card: 'summary_large_image',
     title: 'Well Suited',
-    description: 'Six-piece Americana rock band known for high-energy shows and infectious good vibes',
+    description: 'Six-piece Americana rock band known for high-energy shows and infectious good vibes.',
     images: ['/images/optimized/og-image.jpg'],
-  },
+  }
 }
 
 export default function RootLayout({
@@ -53,3 +55,7 @@ export default function RootLayout({
     </html>
   )
 }
+
+export const viewport = {
+  themeColor: '#0e0f11'
+};
