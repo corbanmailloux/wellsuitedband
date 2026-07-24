@@ -20,11 +20,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Well Suited',
     description: 'Six-piece Americana rock band known for high-energy shows and infectious good vibes',
-    url: 'https://wellsuitedband.com',
+    // url: 'https://wellsuitedband.com',
+    url: 'https://rebrand-logo.wellsuitedband.pages.dev/',
     siteName: 'Well Suited',
     images: [
       {
-        url: '/images/optimized/og-image1.jpg',
+        url: '/images/optimized/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Well Suited Band',
