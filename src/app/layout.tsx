@@ -5,7 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://wellsuitedband.com'),
+  // metadataBase: new URL('https://wellsuitedband.com'),
+  metadataBase: new URL('https://rebrand-logo.wellsuitedband.pages.dev/'),
   title: 'Well Suited',
   description: 'Well Suited - 6-Piece Americana Rock Band',
 
