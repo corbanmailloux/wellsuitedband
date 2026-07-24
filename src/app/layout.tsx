@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://wellsuitedband.com'),
   title: 'Well Suited',
   description: 'Well Suited - 6-Piece Americana Rock Band',
+  alternates: {
+    canonical: 'https://wellsuitedband.com',
+  },
+  themeColor: '#0e0f11',
   icons: {
     icon: '/images/optimized/brand-circle.png',
     shortcut: '/images/optimized/brand-circle.png',
@@ -20,7 +24,7 @@ export const metadata: Metadata = {
     siteName: 'Well Suited',
     images: [
       {
-        url: '/images/optimized/og-image.jpg',
+        url: '/images/optimized/og-image1.jpg',
         width: 1200,
         height: 630,
         alt: 'Well Suited Band',
