@@ -6,6 +6,12 @@ import ShowCard from './components/ShowCard'
 
 const shows = [
   {
+    href: 'https://fcas.com/tickets',
+    date: '09/10/2026 @ 5:00 PM',
+    name: 'Franklin County Fair',
+    description: 'Greenfield, MA',
+  },
+  {
     href: 'https://nohodna.org/the-taste-of-northampton/',
     date: '09/13/2026',
     name: 'Taste of Northampton',
@@ -128,7 +134,7 @@ export default function Home() {
 
           <div className="space-y-3 text-left">
             {shows.map((show) => (
-              <ShowCard key={show.href} {...show} />
+              <ShowCard key={show.name} {...show} />
             ))}
           </div>
         </div>
