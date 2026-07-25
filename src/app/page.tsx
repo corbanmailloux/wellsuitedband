@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { SiInstagram, SiFacebook, SiYoutube, SiSpotify, SiTiktok, SiApplemusic } from 'react-icons/si'
 import BackgroundImage from './components/BackgroundImage'
-import ShowCard from './components/ShowCard'
+import ShowsList from './components/ShowsList'
 
 const shows = [
   {
@@ -132,11 +132,7 @@ export default function Home() {
         <div className="bg-black/75 p-6 rounded-lg max-w-md mx-auto mb-4">
           <h2 className="text-3xl font-bold text-brand mb-4">Upcoming Shows</h2>
 
-          <div className="space-y-3 text-left">
-            {shows.map((show) => (
-              <ShowCard key={show.name} {...show} />
-            ))}
-          </div>
+          <ShowsList shows={shows} />
         </div>
 
         {/* Band News Callout */}
