@@ -20,9 +20,9 @@ export default function ShowCard({ href, date, name, description, countdown }: S
         <p className="py-1 text-sm font-semibold tracking-wide text-brand">{date}</p>
         {countdown && (
           <span
-            className={`inline-flex items-center rounded-full px-2.5 py-1 text-xs font-semibold ${
+            className={`inline-flex items-center rounded-full py-1 text-xs font-semibold ${
               isSpecialCountdown
-                ? 'bg-red-500/40 text-white ring-0'
+                ? 'px-2.5 bg-red-500/40 text-white ring-0'
                 : 'text-white/60'
             }`}
           >
