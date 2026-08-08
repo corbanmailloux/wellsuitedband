@@ -86,20 +86,29 @@ export default function NewsletterSignup() {
   const widgetIdRef = useRef<string | null>(null)
   const [status, setStatus] = useState<SubmissionStatus>('idle')
   const [message, setMessage] = useState('')
+  const [showWidget, setShowWidget] = useState(false)
 
   useEffect(() => {
     const renderWidget = () => {
-      if (!containerRef.current || !window.turnstile || widgetIdRef.current) return
+      if (!showWidget || !containerRef.current || !window.turnstile || widgetIdRef.current) return
 
       widgetIdRef.current = window.turnstile.render(containerRef.current, {
         sitekey: SITE_KEY,
         theme: 'dark',
         language: 'en',
-        appearance: 'interaction-only',
+        // appearance: 'interaction-only',
         callback: () => {
           setStatus((current) => (current === 'loading' ? 'idle' : current))
         },
       })
+    }
+
+    if (!showWidget) {
+      if (widgetIdRef.current) {
+        window.turnstile?.remove(widgetIdRef.current)
+        widgetIdRef.current = null
+      }
+      return
     }
 
     if (window.turnstile) {
@@ -123,12 +132,14 @@ export default function NewsletterSignup() {
     return () => {
       if (widgetIdRef.current) {
         window.turnstile?.remove(widgetIdRef.current)
+        widgetIdRef.current = null
       }
     }
-  }, [])
+  }, [showWidget])
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
+    setShowWidget(true)
 
     if (!window.turnstile || !widgetIdRef.current) {
       setStatus('error')
@@ -196,6 +207,7 @@ export default function NewsletterSignup() {
               autoComplete="given-name"
               placeholder="First name"
               required
+              onFocus={() => setShowWidget(true)}
               className="w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-white placeholder:text-brand-white/50 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30"
             />
           </label>
@@ -209,6 +221,7 @@ export default function NewsletterSignup() {
               autoComplete="family-name"
               placeholder="Last name"
               required
+              onFocus={() => setShowWidget(true)}
               className="w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-white placeholder:text-brand-white/50 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30"
             />
           </label>
@@ -223,13 +236,16 @@ export default function NewsletterSignup() {
             autoComplete="email"
             placeholder="Email address"
             required
+            onFocus={() => setShowWidget(true)}
             className="w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-white placeholder:text-brand-white/50 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30"
           />
         </label>
 
-        <div className="flex w-full items-center justify-center overflow-visible rounded-none border-0 bg-transparent p-0">
-          <div ref={containerRef} className="flex items-center justify-center" />
-        </div>
+        {showWidget ? (
+          <div className="flex w-full items-center justify-center overflow-visible rounded-none border-0 bg-transparent p-0">
+            <div ref={containerRef} className="flex items-center justify-center" />
+          </div>
+        ) : null}
 
         <input type="text" name="email_address_check" defaultValue="" className="hidden" />
         <input type="hidden" name="locale" value="en" />
@@ -237,6 +253,7 @@ export default function NewsletterSignup() {
         <button
           type="submit"
           disabled={status === 'loading'}
+          onClick={() => setShowWidget(true)}
           className="w-full cursor-pointer rounded-xl bg-brand px-6 py-3 text-sm font-semibold text-brand-black transition hover:bg-brand/80 disabled:cursor-not-allowed disabled:opacity-70"
         >
           {status === 'loading' ? 'Subscribing…' : 'Subscribe'}
