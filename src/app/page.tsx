@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { SiInstagram, SiFacebook, SiYoutube, SiSpotify, SiTiktok, SiApplemusic } from 'react-icons/si'
 import BackgroundImage from './components/BackgroundImage'
+import NewsletterSignup from './components/NewsletterSignup'
 import ShowsList from './components/ShowsList'
 
 const shows = [
@@ -179,6 +180,9 @@ export default function Home() {
             </a>
           </div>
         </div>
+
+        {/* Newsletter Signup */}
+        <NewsletterSignup />
 
         {/* About Link */}
         <Link
