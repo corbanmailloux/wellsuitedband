@@ -76,18 +76,17 @@ export default function ShowsList({ shows }: ShowsListProps) {
     const todayDateKey = getDateKeyInET(new Date())
 
     const nextShows = shows
-      .map((show) => ({
-        ...show,
-        dateKey: parseDateKey(show.date),
-      }))
-      .filter((show) => show.dateKey >= todayDateKey) // Only include shows that are today or in the future
+      .map((show) => ({ show, dateKey: parseDateKey(show.date) }))
+      .filter(({ dateKey }) => dateKey >= todayDateKey) // Only include shows that are today or in the future
       .sort((a, b) => a.dateKey.localeCompare(b.dateKey)) // Sort shows by date ascending
-      .map((show) => ({
+      .map(({ show, dateKey }) => ({
         ...show,
-        countdown: getCountdownText(show.dateKey, todayDateKey),
+        countdown: getCountdownText(dateKey, todayDateKey),
       }))
-      .map(({ dateKey, ...show }) => show)
 
+    // The countdown depends on the client's clock, so it can only be computed
+    // after hydration without causing a mismatch with the prerendered HTML.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setEnrichedShows(nextShows)
   }, [shows])
 

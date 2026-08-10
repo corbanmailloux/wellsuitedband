@@ -1,6 +1,6 @@
 'use client'
 
-import { FormEvent, useEffect, useRef, useState } from 'react'
+import { FormEvent, useCallback, useEffect, useRef, useState } from 'react'
 
 type SubmissionStatus = 'idle' | 'loading' | 'success' | 'error'
 
@@ -84,63 +84,13 @@ function parseSibResponse(responseText: string, fallbackSuccess: boolean) {
 export default function NewsletterSignup() {
   const containerRef = useRef<HTMLDivElement>(null)
   const widgetIdRef = useRef<string | null>(null)
+  const pendingSubmitRef = useRef(false)
+  const formRef = useRef<HTMLFormElement | null>(null)
   const [status, setStatus] = useState<SubmissionStatus>('idle')
   const [message, setMessage] = useState('')
   const [showWidget, setShowWidget] = useState(false)
 
-  useEffect(() => {
-    const renderWidget = () => {
-      if (!showWidget || !containerRef.current || !window.turnstile || widgetIdRef.current) return
-
-      widgetIdRef.current = window.turnstile.render(containerRef.current, {
-        sitekey: SITE_KEY,
-        theme: 'dark',
-        language: 'en',
-        // appearance: 'interaction-only',
-        callback: () => {
-          setStatus((current) => (current === 'loading' ? 'idle' : current))
-        },
-      })
-    }
-
-    if (!showWidget) {
-      if (widgetIdRef.current) {
-        window.turnstile?.remove(widgetIdRef.current)
-        widgetIdRef.current = null
-      }
-      return
-    }
-
-    if (window.turnstile) {
-      renderWidget()
-      return
-    }
-
-    const existingScript = document.querySelector('script[src="https://challenges.cloudflare.com/turnstile/v0/api.js"]')
-    if (existingScript) {
-      existingScript.addEventListener('load', renderWidget, { once: true })
-      return
-    }
-
-    const script = document.createElement('script')
-    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js'
-    script.async = true
-    script.defer = true
-    script.onload = renderWidget
-    document.body.appendChild(script)
-
-    return () => {
-      if (widgetIdRef.current) {
-        window.turnstile?.remove(widgetIdRef.current)
-        widgetIdRef.current = null
-      }
-    }
-  }, [showWidget])
-
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    setShowWidget(true)
-
+  const submitForm = useCallback(async (form: HTMLFormElement) => {
     if (!window.turnstile || !widgetIdRef.current) {
       setStatus('error')
       setMessage('The captcha is not ready yet. Please refresh and try again.')
@@ -154,10 +104,7 @@ export default function NewsletterSignup() {
       return
     }
 
-    const form = event.currentTarget
     const formData = new FormData(form)
-    formData.set('email_address_check', '')
-    formData.set('locale', 'en')
     formData.set('cf-turnstile-response', token)
 
     setStatus('loading')
@@ -167,7 +114,6 @@ export default function NewsletterSignup() {
       const response = await fetch(`${ACTION_URL}?isAjax=1`, {
         method: 'POST',
         body: formData,
-        redirect: 'manual',
       })
 
       const responseText = await response.text()
@@ -187,6 +133,63 @@ export default function NewsletterSignup() {
     } finally {
       window.turnstile?.reset(widgetIdRef.current || undefined)
     }
+  }, [])
+
+  useEffect(() => {
+    if (!showWidget) return
+
+    const renderWidget = () => {
+      if (!showWidget || !containerRef.current || !window.turnstile || widgetIdRef.current) return
+
+      widgetIdRef.current = window.turnstile.render(containerRef.current, {
+        sitekey: SITE_KEY,
+        theme: 'dark',
+        language: 'en',
+        callback: () => {
+          setStatus((current) => (current === 'loading' ? 'idle' : current))
+          if (pendingSubmitRef.current && formRef.current) {
+            pendingSubmitRef.current = false
+            submitForm(formRef.current)
+          }
+        },
+      })
+    }
+
+    if (window.turnstile) {
+      renderWidget()
+    } else {
+      const existingScript = document.querySelector('script[src="https://challenges.cloudflare.com/turnstile/v0/api.js"]')
+      if (existingScript) {
+        existingScript.addEventListener('load', renderWidget, { once: true })
+      } else {
+        const script = document.createElement('script')
+        script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js'
+        script.async = true
+        script.defer = true
+        script.onload = renderWidget
+        document.body.appendChild(script)
+      }
+    }
+
+    return () => {
+      if (widgetIdRef.current) {
+        window.turnstile?.remove(widgetIdRef.current)
+        widgetIdRef.current = null
+      }
+    }
+  }, [showWidget, submitForm])
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    setShowWidget(true)
+
+    if (!window.turnstile || !widgetIdRef.current) {
+      pendingSubmitRef.current = true
+      formRef.current = event.currentTarget
+      return
+    }
+
+    await submitForm(event.currentTarget)
   }
 
   return (

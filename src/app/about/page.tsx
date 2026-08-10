@@ -28,7 +28,7 @@ export default function About() {
 
       {/* Content */}
       <div
-        className="relative z-10 container mx-auto px-4 py-16"
+        className="relative z-10 container py-16"
         onClick={handleBackgroundClick}>
         {/* Back to Home */}
         <Link

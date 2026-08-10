@@ -50,6 +50,9 @@ export default function Home() {
 
       {/* Content */}
       <div className="relative min-h-screen flex flex-col items-center justify-center p-4 text-brand-white text-center">
+        {/* Band Name - Visually hidden (branding image contains the name), kept for SEO/a11y. */}
+        <h1 className="sr-only">Well Suited</h1>
+
         {/* Logo */}
         <div className="size-60 mb-6 relative md:size-80">
           <Image
@@ -61,9 +64,6 @@ export default function Home() {
             priority
           />
         </div>
-
-        {/* Band Name - Dropped with new branding that contains the name. */}
-        {/* <h1 className="text-4xl font-bold mb-6 text-brand-white">Well Suited</h1> */}
 
         {/* Social Links */}
         <div className="flex space-x-6 md:space-x-12 mb-8 items-center justify-center">
@@ -138,7 +138,7 @@ export default function Home() {
 
         {/* Band News Callout */}
         <div className="bg-black/75 p-6 rounded-lg max-w-md mx-auto mb-4">
-          <h2 className="text-2xl font-bold text-brand mb-4">"Wait Forever" Streaming Now</h2>
+          <h2 className="text-2xl font-bold text-brand mb-4">&ldquo;Wait Forever&rdquo; Streaming Now</h2>
           <div className="flex justify-center mb-4">
             <div className="w-60 md:w-80">
               <a
