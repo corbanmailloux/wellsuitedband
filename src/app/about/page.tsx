@@ -109,7 +109,7 @@ export default function About() {
                 rel="me noopener"
                 className="text-brand-white hover:text-brand transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
-                <SiInstagram className="w-6 h-6" />
+                <SiInstagram className="w-6 h-6" aria-hidden="true" />
                 Instagram
               </a>
               <a
@@ -118,7 +118,7 @@ export default function About() {
                 rel="me noopener"
                 className="text-brand-white hover:text-brand transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
-                <SiFacebook className="w-6 h-6" />
+                <SiFacebook className="w-6 h-6" aria-hidden="true" />
                 Facebook
               </a>
               <a
@@ -127,7 +127,7 @@ export default function About() {
                 rel="me noopener"
                 className="text-brand-white hover:text-brand transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
-                <SiTiktok className="w-6 h-6" />
+                <SiTiktok className="w-6 h-6" aria-hidden="true" />
                 TikTok
               </a>
               <a
@@ -136,7 +136,7 @@ export default function About() {
                 rel="me noopener"
                 className="text-brand-white hover:text-brand transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
-                <SiYoutube className="w-6 h-6" />
+                <SiYoutube className="w-6 h-6" aria-hidden="true" />
                 YouTube
               </a>
               <a
@@ -145,7 +145,7 @@ export default function About() {
                 rel="me noopener"
                 className="text-brand-white hover:text-brand transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
-                <SiSpotify className="w-6 h-6" />
+                <SiSpotify className="w-6 h-6" aria-hidden="true" />
                 Spotify
               </a>
               <a
@@ -154,7 +154,7 @@ export default function About() {
                 rel="me noopener"
                 className="text-brand-white hover:text-brand transition-colors flex items-center justify-center gap-2 w-full h-full"
               >
-                <SiApplemusic className="w-6 h-6" />
+                <SiApplemusic className="w-6 h-6" aria-hidden="true" />
                 Apple Music
               </a>
             </div>
