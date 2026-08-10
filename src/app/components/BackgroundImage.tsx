@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 interface BackgroundImageProps {
   imageSrc: string;
   portraitSrc?: string;
@@ -20,39 +18,15 @@ export default function BackgroundImage({
   return (
     <>
       <div className={containerClass ?? 'fixed inset-0 opacity-60'}>
-        {portraitSrc ? (
-          <>
-            <div className="relative block md:hidden w-full h-full">
-              <Image
-                src={portraitSrc}
-                alt={alt}
-                fill
-                style={{ objectFit: 'cover' }}
-                priority
-                quality={85}
-              />
-            </div>
-            <div className="relative hidden md:block w-full h-full">
-              <Image
-                src={imageSrc}
-                alt={alt}
-                fill
-                style={{ objectFit: 'cover' }}
-                priority
-                quality={85}
-              />
-            </div>
-          </>
-        ) : (
-          <Image
+        <picture className="block h-full w-full">
+          {portraitSrc ? <source media="(max-width: 767px)" srcSet={portraitSrc} /> : null}
+          <img
             src={imageSrc}
             alt={alt}
-            fill
-            style={{ objectFit: 'cover' }}
-            priority
-            sizes="100vw"
+            fetchPriority="high"
+            className="h-full w-full object-cover"
           />
-        )}
+        </picture>
       </div>
       {overlayClass && (
         <div
