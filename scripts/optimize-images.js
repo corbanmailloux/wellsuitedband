@@ -8,6 +8,11 @@ async function optimizeImage(inputName, outputName, maxWidth, options = {}) {
     const outputPathAvif = path.join(process.cwd(), 'public', 'images', 'optimized', `${baseName}.avif`);
     const outputExt = path.extname(outputName).toLowerCase();
 
+    // AVIF encoding defaults. Backgrounds sit under a translucent overlay, so they
+    // can be compressed harder without a visible quality loss.
+    const avifQuality = options.avifQuality ?? 50;
+    const avifEffort = options.avifEffort ?? 4;
+
     try {
         let pipeline = sharp(inputPath);
 
@@ -44,7 +49,8 @@ async function optimizeImage(inputName, outputName, maxWidth, options = {}) {
 
         // Write AVIF first (smaller, modern format), then keep a matching fallback format.
         await pipeline.clone().avif({
-            quality: 60
+            quality: avifQuality,
+            effort: avifEffort
         }).toFile(outputPathAvif);
 
         if (outputExt === '.png') {
@@ -58,7 +64,7 @@ async function optimizeImage(inputName, outputName, maxWidth, options = {}) {
             }).toFile(outputPath);
         } else {
             await pipeline.clone().jpeg({
-                quality: 80,
+                quality: 75,
                 progressive: true
             }).toFile(outputPath);
         }
@@ -70,11 +76,12 @@ async function optimizeImage(inputName, outputName, maxWidth, options = {}) {
 }
 
 async function optimizeAllImages() {
-    // Landscape version - optimized for desktop
-    await optimizeImage('background.jpg', 'background.jpg', 2048);
+    // Landscape version - optimized for desktop. Compressed hard because it is
+    // displayed under a 60% opacity overlay.
+    await optimizeImage('background.jpg', 'background.jpg', 2048, { avifQuality: 40 });
 
-    // Portrait version - optimized for mobile
-    await optimizeImage('background-portrait.jpg', 'background-portrait.jpg', 1200);
+    // Portrait version - optimized for mobile (this is the mobile LCP image).
+    await optimizeImage('background-portrait.jpg', 'background-portrait.jpg', 1200, { avifQuality: 40 });
 
     // OpenGraph image - exact dimensions
     await optimizeImage('og-image.png', 'og-image.jpg', null, {
@@ -93,6 +100,27 @@ async function optimizeAllImages() {
 
     // Brand logo optimized for homepage display and site icon usage.
     await optimizeImage('rebrand/brand-circle.png', 'brand-circle.png', 600);
+
+    // Small site icons. Browsers and OSes fetch these for tab/home-screen icons,
+    // so keep them tiny instead of serving the 600px brand logo.
+    await generateIcon('rebrand/brand-circle.png', 'icon-192.png', 192);
+    await generateIcon('rebrand/brand-circle.png', 'icon-512.png', 512);
+    await generateIcon('rebrand/brand-circle.png', 'apple-touch-icon.png', 180);
+}
+
+async function generateIcon(inputName, outputName, size) {
+    const inputPath = path.join(process.cwd(), 'public', 'images', inputName);
+    const outputPath = path.join(process.cwd(), 'public', 'images', 'optimized', outputName);
+
+    try {
+        await sharp(inputPath)
+            .resize(size, size, { fit: 'cover', position: 'center' })
+            .png({ compressionLevel: 9, adaptiveFiltering: true })
+            .toFile(outputPath);
+        console.log(`${outputName} generated successfully!`);
+    } catch (error) {
+        console.error(`Error generating ${outputName}:`, error);
+    }
 }
 
 optimizeAllImages();

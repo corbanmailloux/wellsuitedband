@@ -1,20 +1,9 @@
-'use client'
-
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
 import { SiInstagram, SiFacebook, SiYoutube, SiSpotify, SiTiktok, SiApplemusic } from 'react-icons/si'
 import BackgroundImage from '../components/BackgroundImage'
 
 export default function About() {
-  const router = useRouter()
-
-  const handleBackgroundClick = (e: React.MouseEvent) => {
-    if (e.target === e.currentTarget) {
-      router.push('/')
-    }
-  }
-
   return (
     <main className="min-h-screen relative">
       <BackgroundImage
@@ -22,27 +11,30 @@ export default function About() {
         portraitSrc="/images/optimized/background-portrait.avif"
         alt="Well Suited Band"
         containerClass="fixed inset-0 z-0"
-        overlayClass="bg-black/70"
-        overlayClick={handleBackgroundClick}
+      />
+
+      {/* Clicking anywhere outside the content card navigates back home. */}
+      <Link
+        href="/"
+        aria-label="Back to Home"
+        className="fixed inset-0 z-10 bg-black/70"
       />
 
       {/* Content */}
-      <div
-        className="relative z-10 container py-16"
-        onClick={handleBackgroundClick}>
+      <div className="pointer-events-none relative z-20 container py-16">
         {/* Back to Home */}
         <Link
           href="/"
-          className="inline-block mb-8 text-brand-white hover:text-brand transition-colors"
+          className="pointer-events-auto inline-block mb-8 text-brand-white hover:text-brand transition-colors"
         >
           ← Back to Home
         </Link>
 
         {/* About Content */}
-        <div className="max-w-3xl mx-auto bg-black/90 p-8 rounded-lg text-brand-white backdrop-blur-xs">
+        <div className="pointer-events-auto max-w-3xl mx-auto bg-black/90 p-8 rounded-lg text-brand-white backdrop-blur-xs">
           <h1 className="text-4xl font-bold text-brand mb-6">About Well Suited</h1>
 
-          <div className="prose prose-invert" onClick={(e) => e.stopPropagation()}>
+          <div className="prose prose-invert">
             <p className="mb-6">
               Well Suited is a 6-piece Americana band blending rock and soul into high-energy performances and feel-good grooves. Formed in 2010, the band has grown into a genre-bending force—complete with sax, guitars, piano, and vocal hooks you’ll be humming for days.
             </p>
