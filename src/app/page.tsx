@@ -13,6 +13,12 @@ const shows = [
     description: 'Greenfield, MA',
   },
   {
+    href: 'https://tickets.venuepilot.com/e/juice-2026-09-11-stone-church-brattleboro-23aa31',
+    date: '09/11/2026 @ 8:00 PM',
+    name: 'Stone Church, opening for Juice',
+    description: 'Brattleboro, VT. Click for tickets.',
+  },
+  {
     href: 'https://nohodna.org/the-taste-of-northampton/',
     date: '09/13/2026',
     name: 'Taste of Northampton',
