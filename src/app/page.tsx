@@ -20,9 +20,9 @@ const shows = [
   },
   {
     href: 'https://nohodna.org/the-taste-of-northampton/',
-    date: '09/13/2026',
+    date: '09/13/2026 @ 4:00 PM',
     name: 'Taste of Northampton',
-    description: 'Northampton, MA. More details coming soon.',
+    description: 'Northampton, MA. Click for event details.',
   },
   {
     href: 'https://www.thebige.com/events/2026/well-suited',
