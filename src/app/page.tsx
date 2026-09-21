@@ -6,24 +6,24 @@ import NewsletterSignup from './components/NewsletterSignup'
 import ShowsList from './components/ShowsList'
 
 const shows = [
-  {
-    href: 'https://fcas.com/tickets',
-    date: '09/10/2026 @ 5:00 PM',
-    name: 'Franklin County Fair',
-    description: 'Greenfield, MA',
-  },
-  {
-    href: 'https://tickets.venuepilot.com/e/juice-2026-09-11-stone-church-brattleboro-23aa31',
-    date: '09/11/2026 @ 8:00 PM',
-    name: 'Stone Church, opening for Juice',
-    description: 'Brattleboro, VT. Click for tickets.',
-  },
-  {
-    href: 'https://nohodna.org/the-taste-of-northampton/',
-    date: '09/13/2026 @ 4:00 PM',
-    name: 'Taste of Northampton',
-    description: 'Northampton, MA. Click for event details.',
-  },
+  // {
+  //   href: 'https://fcas.com/tickets',
+  //   date: '09/10/2026 @ 5:00 PM',
+  //   name: 'Franklin County Fair',
+  //   description: 'Greenfield, MA',
+  // },
+  // {
+  //   href: 'https://tickets.venuepilot.com/e/juice-2026-09-11-stone-church-brattleboro-23aa31',
+  //   date: '09/11/2026 @ 8:00 PM',
+  //   name: 'Stone Church, opening for Juice',
+  //   description: 'Brattleboro, VT. Click for tickets.',
+  // },
+  // {
+  //   href: 'https://nohodna.org/the-taste-of-northampton/',
+  //   date: '09/13/2026 @ 4:00 PM',
+  //   name: 'Taste of Northampton',
+  //   description: 'Northampton, MA. Click for event details.',
+  // },
   {
     href: 'https://www.thebige.com/events/2026/well-suited',
     date: '09/24/2026 @ 3:00 PM',
@@ -37,10 +37,10 @@ const shows = [
     description: 'Orange, MA. View event details.',
   },
   {
-    href: 'https://www.incandescentbrewing.com/events',
+    href: 'https://www.incandescentbrewing.com/events#:~:text=Oktoberfest%3A%20Well%20Suited',
     date: '10/03/2026 @ 6:00 PM',
     name: 'Incandescent Brewing',
-    description: 'Bernardston, MA. Event details coming soon.',
+    description: 'Bernardston, MA. Oktoberfest event!',
   },
 ]
 
