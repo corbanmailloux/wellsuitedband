@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { SiInstagram, SiFacebook, SiYoutube, SiSpotify, SiTiktok, SiApplemusic } from 'react-icons/si'
 import BackgroundImage from './components/BackgroundImage'
+import Footer from './components/Footer'
 import NewsletterSignup from './components/NewsletterSignup'
 import ShowsList from './components/ShowsList'
 
@@ -46,7 +47,7 @@ const shows = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative">
+    <main className="min-h-screen relative flex flex-col">
       <div className="fixed inset-0 bg-black"></div>
       <BackgroundImage
         imageSrc="/images/optimized/background.avif"
@@ -55,7 +56,7 @@ export default function Home() {
       />
 
       {/* Content */}
-      <div className="relative min-h-screen flex flex-col items-center justify-center p-4 text-brand-white text-center">
+      <div className="relative flex-1 flex flex-col items-center justify-center p-4 text-brand-white text-center">
         {/* Band Name - Visually hidden (branding image contains the name), kept for SEO/a11y. */}
         <h1 className="sr-only">Well Suited</h1>
 
@@ -198,6 +199,8 @@ export default function Home() {
           About Us
         </Link>
       </div>
+
+      <Footer />
     </main>
   )
 }

@@ -2,10 +2,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { SiInstagram, SiFacebook, SiYoutube, SiSpotify, SiTiktok, SiApplemusic } from 'react-icons/si'
 import BackgroundImage from '../components/BackgroundImage'
+import Footer from '../components/Footer'
 
 export default function About() {
   return (
-    <main className="min-h-screen relative">
+    <main className="min-h-screen relative flex flex-col">
       <BackgroundImage
         imageSrc="/images/optimized/background.avif"
         portraitSrc="/images/optimized/background-portrait.avif"
@@ -21,7 +22,7 @@ export default function About() {
       />
 
       {/* Content */}
-      <div className="pointer-events-none relative z-20 container py-16">
+      <div className="pointer-events-none relative z-20 flex-1 container py-16">
         {/* Back to Home */}
         <Link
           href="/"
@@ -153,6 +154,8 @@ export default function About() {
           </div>
         </div>
       </div>
+
+      <Footer />
     </main>
   )
 }
