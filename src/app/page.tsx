@@ -24,12 +24,12 @@ const shows = [
   //   name: 'Taste of Northampton',
   //   description: 'Northampton, MA. Click for event details.',
   // },
-  {
-    href: 'https://www.thebige.com/events/2026/well-suited',
-    date: '09/24/2026 @ 3:00 PM',
-    name: 'The Big E (on the E Stage)',
-    description: 'West Springfield, MA. View event details.',
-  },
+  // {
+  //   href: 'https://www.thebige.com/events/2026/well-suited',
+  //   date: '09/24/2026 @ 3:00 PM',
+  //   name: 'The Big E (on the E Stage)',
+  //   description: 'West Springfield, MA. View event details.',
+  // },
   {
     href: 'https://garlicandarts.org/entertainment-and-activities/music/',
     date: '09/26/2026 @ 3:30 PM',
