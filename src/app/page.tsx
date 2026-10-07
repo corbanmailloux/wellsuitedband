@@ -4,9 +4,10 @@ import { SiInstagram, SiFacebook, SiYoutube, SiSpotify, SiTiktok, SiApplemusic }
 import BackgroundImage from './components/BackgroundImage'
 import Footer from './components/Footer'
 import NewsletterSignup from './components/NewsletterSignup'
-import ShowsList from './components/ShowsList'
+import ShowsSection from './components/ShowsSection'
+import { type Show } from './lib/showDates'
 
-const shows = [
+const shows: Show[] = [
   // {
   //   href: 'https://fcas.com/tickets',
   //   date: '09/10/2026 @ 5:00 PM',
@@ -136,12 +137,9 @@ export default function Home() {
           </a>
         </div>
 
-        {/* Next Show Callout */}
-        <div className="bg-black/75 p-6 rounded-lg max-w-md mx-auto mb-4">
-          <h2 className="text-3xl font-bold text-brand mb-4">Upcoming Shows</h2>
-
-          <ShowsList shows={shows} />
-        </div>
+        {/* Upcoming Shows + Tip Jar (tip jar moves above the shows and highlights
+            itself when a show falls today or yesterday) */}
+        <ShowsSection shows={shows} />
 
         {/* Band News Callout */}
         <div className="bg-black/75 p-6 rounded-lg max-w-md mx-auto mb-4">

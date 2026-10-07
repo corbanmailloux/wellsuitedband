@@ -2,48 +2,10 @@
 
 import { useEffect, useState } from 'react'
 import ShowCard from './ShowCard'
-
-const TIMEZONE = 'America/New_York'
-
-interface Show {
-  href?: string
-  date: string
-  name: string
-  description: string
-}
+import { getDateKeyInET, parseDateKey, type Show } from '../lib/showDates'
 
 interface EnrichedShow extends Show {
   countdown: string
-}
-
-function getDatePartsInET(date: Date): { year: number; month: number; day: number } {
-  // Read the date components in US Eastern Time so all comparisons stay aligned
-  // with the band’s local show schedule, even when the server and browser zones differ.
-  const parts = new Intl.DateTimeFormat('en-US', {
-    timeZone: TIMEZONE,
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-  }).formatToParts(date)
-
-  const year = Number(parts.find((part) => part.type === 'year')?.value ?? '0')
-  const month = Number(parts.find((part) => part.type === 'month')?.value ?? '0')
-  const day = Number(parts.find((part) => part.type === 'day')?.value ?? '0')
-
-  return { year, month, day }
-}
-
-function getDateKeyInET(date: Date): string {
-  const { year, month, day } = getDatePartsInET(date)
-  return `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`
-}
-
-function parseDateKey(dateStr: string): string {
-  const match = dateStr.match(/(\d{2})\/(\d{2})\/(\d{4})/)
-  if (!match) throw new Error(`Invalid date format: ${dateStr}`)
-
-  const [, month, day, year] = match
-  return `${year}-${month}-${day}`
 }
 
 function getCountdownText(showDateKey: string, todayDateKey: string): string {
