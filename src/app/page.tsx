@@ -31,18 +31,18 @@ const shows = [
   //   name: 'The Big E (on the E Stage)',
   //   description: 'West Springfield, MA. View event details.',
   // },
-  {
-    href: 'https://garlicandarts.org/entertainment-and-activities/music/',
-    date: '09/26/2026 @ 3:30 PM',
-    name: 'North Quabbin Garlic & Arts Festival',
-    description: 'Orange, MA. View event details.',
-  },
-  {
-    href: 'https://www.incandescentbrewing.com/events#:~:text=Oktoberfest%3A%20Well%20Suited',
-    date: '10/03/2026 @ 6:00 PM',
-    name: 'Incandescent Brewing',
-    description: 'Bernardston, MA. Oktoberfest event!',
-  },
+  // {
+  //   href: 'https://garlicandarts.org/entertainment-and-activities/music/',
+  //   date: '09/26/2026 @ 3:30 PM',
+  //   name: 'North Quabbin Garlic & Arts Festival',
+  //   description: 'Orange, MA. View event details.',
+  // },
+  // {
+  //   href: 'https://www.incandescentbrewing.com/events#:~:text=Oktoberfest%3A%20Well%20Suited',
+  //   date: '10/03/2026 @ 6:00 PM',
+  //   name: 'Incandescent Brewing',
+  //   description: 'Bernardston, MA. Oktoberfest event!',
+  // },
 ]
 
 export default function Home() {
