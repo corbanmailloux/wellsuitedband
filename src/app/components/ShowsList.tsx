@@ -58,7 +58,14 @@ export default function ShowsList({ shows }: ShowsListProps) {
         <ShowCard key={show.name} {...show} />
       ))}
       {enrichedShows.length === 0 && (
-        <p className="text-white/60">No upcoming shows at the moment.</p>
+        <p className="text-center text-white/60">
+          No upcoming shows at the moment.
+          <br />
+          Want to book us?{' '}
+          <a href="mailto:booking@wellsuitedband.com" className="text-brand hover:underline">
+            Email us.
+          </a>
+        </p>
       )}
     </div>
   )
