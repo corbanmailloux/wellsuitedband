@@ -44,6 +44,12 @@ const shows: Show[] = [
   //   name: 'Incandescent Brewing',
   //   description: 'Bernardston, MA. Oktoberfest event!',
   // },
+  {
+    href: 'https://www.facebook.com/share/p/1ES6YA4yg8/',
+    date: '11/25/2026 @ 8:00 PM',
+    name: 'St. Stanislaus Society',
+    description: 'Turners Falls, MA. Music starts at 6 PM.',
+  }
 ]
 
 export default function Home() {
